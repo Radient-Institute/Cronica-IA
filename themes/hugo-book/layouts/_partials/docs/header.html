@@ -1,0 +1,13 @@
+<div class="flex align-center justify-between">
+  <label for="menu-control" aria-label="{{ partial "docs/text/i18n" "Menu" }}">
+    {{ partial "docs/icon" "menu" }}
+  </label>
+
+  <h3>{{ partial "docs/title" . }}</h3>
+
+  <label for="toc-control" aria-label="{{ partial "docs/text/i18n" "Table of Contents" }}">
+    {{ if partial "docs/toc-show" . }}
+    {{ partial "docs/icon" "toc" }}
+    {{ end }}
+  </label>
+</div>

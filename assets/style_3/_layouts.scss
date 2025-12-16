@@ -1,0 +1,79 @@
+// ============================================
+// SKYLINE REVERIE - LAYOUTS
+// ============================================
+
+main {
+    background: linear-gradient(180deg, rgba(255, 248, 240, 0.95), rgba(245, 230, 211, 0.95));
+}
+
+.section {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--sr-space-8);
+    padding: var(--sr-space-16) var(--sr-space-6);
+}
+
+.section-content {
+    grid-column: 2 / 12;
+    color: var(--sr-ink-muted);
+}
+
+.section-narrow {
+    grid-column: 3 / 11;
+}
+
+.focal-point {
+    grid-column: 1 / -1;
+    height: 360px;
+    margin: var(--sr-space-12) 0;
+    background: linear-gradient(135deg, rgba(91, 180, 196, 0.18), rgba(232, 139, 139, 0.12));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: var(--sr-border-strong);
+    box-shadow: var(--sr-shadow-offset);
+}
+
+.content-area {
+    max-width: var(--sr-container-max);
+    margin: 0 auto;
+    padding: 0 var(--sr-space-6);
+}
+
+.book-page {
+    background: rgba(255, 248, 240, 0.98);
+    color: var(--sr-ink);
+    padding: var(--sr-space-12) var(--sr-space-8);
+    box-shadow: 0 0 0 2px rgba(11, 27, 36, 0.06), 12px 12px 0 var(--sr-cream);
+
+    .markdown {
+        color: var(--sr-ink-muted);
+    }
+}
+
+.book-article {
+    background: rgba(255, 255, 255, 0.9);
+    border: var(--sr-border-strong);
+    padding: var(--sr-space-10);
+    border-radius: var(--sr-radius);
+    box-shadow: var(--sr-shadow-offset), var(--sr-shadow-soft);
+}
+
+@media screen and (max-width: 1024px) {
+    .section {
+        grid-template-columns: repeat(8, 1fr);
+        padding: var(--sr-space-12) var(--sr-space-4);
+    }
+
+    .section-content,
+    .section-narrow {
+        grid-column: 1 / -1;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .section {
+        grid-template-columns: 1fr;
+        padding: var(--sr-space-10) var(--sr-space-3);
+    }
+}

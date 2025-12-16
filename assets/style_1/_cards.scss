@@ -1,0 +1,257 @@
+// ============================================
+// CONTROLLED CHAOS - CARD COMPONENTS
+// ============================================
+
+// ==========================================
+// BASE CARD
+// ==========================================
+
+.card,
+.book-card {
+    background: var(--cc-white);
+    border: 1px solid var(--cc-medium-gray);
+    border-radius: var(--cc-border-radius-minimal);
+    padding: var(--cc-space-2);
+    transition: all var(--cc-transition-medium) var(--cc-easing-smooth);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    // Subtle collage peek on hover (10% opacity)
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100px;
+        height: 100px;
+        background: var(--cc-primary-accent);
+        opacity: 0;
+        transform: translate(50%, -50%) rotate(15deg);
+        transition: all var(--cc-transition-slow) var(--cc-easing-smooth);
+        mix-blend-mode: multiply;
+        clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    }
+
+    &:hover::before {
+        opacity: 0.1;
+        transform: translate(30%, -30%) rotate(5deg);
+    }
+
+    &:hover {
+        border-color: var(--cc-primary-accent);
+        box-shadow: var(--cc-shadow-accent);
+        transform: translateY(-2px);
+    }
+}
+
+// ==========================================
+// CARD HEADER
+// ==========================================
+
+.card-header {
+    margin-bottom: var(--cc-space-4);
+
+    h3,
+    h4 {
+        margin-top: 0;
+        margin-bottom: var(--cc-space-2);
+        color: var(--cc-black);
+    }
+}
+
+// ==========================================
+// CARD IMAGE
+// ==========================================
+
+.card-image {
+    width: calc(100% + var(--cc-space-10) * 2);
+    margin: calc(-1 * var(--cc-space-10));
+    margin-bottom: var(--cc-space-6);
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    display: block;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+// ==========================================
+// CARD BODY
+// ==========================================
+
+.card-body {
+    flex: 1;
+
+    p {
+        color: var(--cc-dark-gray);
+        line-height: var(--cc-line-height-normal);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+// ==========================================
+// CARD FOOTER
+// ==========================================
+
+.card-footer {
+    margin-top: var(--cc-space-6);
+    padding-top: var(--cc-space-4);
+    border-top: 1px solid var(--cc-medium-gray);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--cc-space-4);
+}
+
+// ==========================================
+// CARD VARIANTS
+// ==========================================
+
+// Minimal card (no border, just shadow)
+.card-minimal {
+    border: none;
+    box-shadow: var(--cc-shadow-subtle);
+
+    &:hover {
+        box-shadow: var(--cc-shadow-medium);
+    }
+}
+
+// Highlighted/Featured card
+.card-featured {
+    border-color: var(--cc-primary-accent);
+    background: linear-gradient(to bottom,
+            var(--cc-white) 0%,
+            rgba(43, 155, 158, 0.02) 100%);
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: var(--cc-gradient-teal);
+    }
+}
+
+// Compact card
+.card-compact {
+    padding: var(--cc-space-6);
+}
+
+// ==========================================
+// CARD GRID LAYOUT
+// ==========================================
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--cc-space-8);
+    margin: var(--cc-space-8) 0;
+
+    @media screen and (max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.card-grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+
+    @media screen and (max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.card-grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+
+    @media screen and (max-width: 968px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (max-width: 640px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+// ==========================================
+// INTERACTIVE CARD (Clickable)
+// ==========================================
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+
+    &:hover {
+        .card {
+            border-color: var(--cc-primary-accent);
+            box-shadow: var(--cc-shadow-accent);
+        }
+
+        h3,
+        h4 {
+            color: var(--cc-primary-accent);
+        }
+    }
+}
+
+// ==========================================
+// CARD WITH BADGE/TAG
+// ==========================================
+
+.card-badge {
+    position: absolute;
+    top: var(--cc-space-4);
+    right: var(--cc-space-4);
+    background: var(--cc-primary-accent);
+    color: var(--cc-white);
+    padding: var(--cc-space-1) var(--cc-space-3);
+    border-radius: var(--cc-border-radius-small);
+    font-size: var(--cc-font-size-smaller);
+    font-weight: var(--cc-font-weight-medium);
+    text-transform: uppercase;
+    letter-spacing: var(--cc-letter-spacing-wide);
+    z-index: var(--cc-z-base);
+}
+
+// ==========================================
+// STAT CARD
+// ==========================================
+
+.card-stat {
+    text-align: center;
+    padding: var(--cc-space-12);
+
+    .stat-value {
+        font-family: var(--cc-font-heading);
+        font-size: var(--cc-font-size-h2);
+        color: var(--cc-primary-accent);
+        line-height: var(--cc-line-height-tight);
+        margin-bottom: var(--cc-space-2);
+    }
+
+    .stat-label {
+        font-family: var(--cc-font-ui);
+        font-size: var(--cc-font-size-small);
+        color: var(--cc-dark-gray);
+        text-transform: uppercase;
+        letter-spacing: var(--cc-letter-spacing-wider);
+    }
+}
+
+
+ul {
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+}

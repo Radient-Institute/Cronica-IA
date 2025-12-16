@@ -1,0 +1,99 @@
+// ============================================
+// NOCTURNE OPULENCE - LAYOUT SYSTEM
+// ============================================
+
+.container,
+.content-wrapper {
+    max-width: var(--noir-max-width);
+    margin: 0 auto;
+    padding: 0 var(--noir-space-6);
+    width: 100%;
+}
+
+.container-wide {
+    max-width: var(--noir-max-wide);
+}
+
+.section {
+    padding: clamp(60px, 12vw, 160px) clamp(24px, 5vw, 80px);
+    position: relative;
+    z-index: var(--noir-z-base);
+}
+
+.section-tight {
+    padding: clamp(40px, 8vw, 100px) clamp(24px, 5vw, 80px);
+}
+
+.grid {
+    display: grid;
+    gap: clamp(32px, 6vw, 80px);
+
+    &-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    &-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    &-auto {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+}
+
+.split {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: clamp(32px, 6vw, 72px);
+    align-items: center;
+
+    &.reverse {
+        grid-template-columns: 1fr 1.3fr;
+    }
+}
+
+.content-section {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--noir-border);
+    border-radius: var(--noir-radius-md);
+    padding: clamp(28px, 5vw, 60px);
+    box-shadow: var(--noir-shadow-soft);
+}
+
+.book-page {
+    background: linear-gradient(180deg, rgba(7, 9, 14, 0.96), rgba(5, 6, 10, 0.98)) !important;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: var(--noir-radius-lg);
+    box-shadow: var(--noir-shadow-soft);
+    padding: clamp(24px, 4vw, 48px) !important;
+}
+
+.book-post {
+    margin-bottom: var(--noir-space-12);
+
+    .book-post-content {
+        margin-top: var(--noir-space-4);
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .container,
+    .content-wrapper {
+        padding: 0 var(--noir-space-4);
+    }
+
+    .split {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .section {
+        padding: clamp(36px, 10vw, 64px) clamp(18px, 6vw, 42px);
+    }
+
+    .grid-2,
+    .grid-3 {
+        grid-template-columns: 1fr;
+    }
+}

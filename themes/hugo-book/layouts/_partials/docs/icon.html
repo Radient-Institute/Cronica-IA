@@ -1,0 +1,12 @@
+{{- $map := dict
+    "menu" "menu"
+    "toc" "toc"
+    "calendar" "event"
+    "edit" "edit"
+    "backward" "arrow_back"
+    "forward" "arrow_forward"
+    "chevron-right" "chevron_right"
+    "translate" "translate"
+-}}
+{{- $name := index $map . | default . -}}
+<span class="book-icon material-symbols-rounded icon-{{ $name | urlize }}" aria-hidden="true">{{ $name }}</span>

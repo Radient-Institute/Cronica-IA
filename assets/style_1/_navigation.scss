@@ -1,0 +1,620 @@
+// ============================================
+// CONTROLLED CHAOS - NAVIGATION
+// ============================================
+
+// ==========================================
+// NAVBAR (Glassmorphism with minimal border)
+// ==========================================
+
+.navbar,
+.book-header {
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--cc-space-6) var(--cc-space-8);
+
+    // Liquid Crystal Glassmorphism Effect
+    background:
+        linear-gradient(135deg,
+            rgba(255, 255, 255, 0.1) 0%,
+            rgba(255, 255, 255, 0.05) 50%,
+            rgba(255, 255, 255, 0.1) 100%),
+        linear-gradient(45deg,
+            rgba(150, 200, 255, 0.08) 0%,
+            rgba(200, 150, 255, 0.06) 25%,
+            rgba(150, 255, 200, 0.08) 50%,
+            rgba(255, 200, 150, 0.06) 75%,
+            rgba(150, 200, 255, 0.08) 100%),
+        rgba(255, 255, 255, 0.25);
+
+    // Strong blur for that crystal-clear frosted look
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+
+    // Prismatic rainbow border effect
+    border-bottom: 1px solid transparent;
+    background-clip: padding-box;
+    border-radius: 2rem;
+    // Crystal reflection border
+    box-shadow:
+        inset 0 1px 0 0 rgba(255, 255, 255, 0.6),
+        inset 0 -1px 0 0 rgba(255, 255, 255, 0.2),
+        0 1px 3px rgba(0, 0, 0, 0.15),
+        0 4px 12px rgba(150, 200, 255, 0.08);
+
+    position: sticky;
+    top: 0;
+    z-index: var(--cc-z-dropdown);
+    transition: all var(--cc-transition-medium) var(--cc-easing-smooth);
+    width: 100%;
+
+    // Add subtle shimmer animation on hover
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(90deg,
+                transparent 0%,
+                rgba(255, 255, 255, 0.3) 50%,
+                transparent 100%);
+        transform: translateX(-100%);
+        transition: transform 0.8s ease-in-out;
+        pointer-events: none;
+        z-index: -1;
+    }
+
+    &:hover::before {
+        transform: translateX(100%);
+    }
+
+    // Ensure mobile menu labels are visible and clickable
+    label {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        padding: var(--cc-space-2);
+        transition: opacity var(--cc-transition-normal);
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+}
+
+// Add subtle shadow on scroll
+.navbar-scrolled,
+.book-header-scrolled {
+    box-shadow: var(--cc-shadow-subtle);
+    background: rgba(255, 255, 255, 0.98);
+}
+
+// ==========================================
+// LOGO
+// ==========================================
+
+.logo,
+.book-brand {
+    font-family: var(--cc-font-heading);
+    font-size: 1.5rem;
+    color: var(--cc-black);
+    text-decoration: none;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: var(--cc-space-3);
+    transition: color var(--cc-transition-normal);
+
+    &:hover {
+        color: var(--cc-primary-accent);
+    }
+
+    // Subtle collage geometric element
+    &::before {
+        content: '';
+        width: 20px;
+        height: 20px;
+        background: var(--cc-primary-accent);
+        opacity: 0.3;
+        clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+        transition: all var(--cc-transition-medium) var(--cc-easing-bounce);
+    }
+
+    &:hover::before {
+        opacity: 1;
+        transform: rotate(90deg);
+    }
+}
+
+// ==========================================
+// NAVIGATION LINKS
+// ==========================================
+
+.nav-links {
+    display: flex;
+    gap: var(--cc-space-12);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.nav-link {
+    font-family: var(--cc-font-ui);
+    font-size: var(--cc-font-size-small);
+    font-weight: var(--cc-font-weight-normal);
+    color: var(--cc-dark-gray);
+    text-decoration: none;
+    letter-spacing: var(--cc-letter-spacing-wider);
+    text-transform: uppercase;
+    transition: color var(--cc-transition-normal) var(--cc-easing-standard);
+    position: relative;
+    padding-bottom: var(--cc-space-1);
+
+    &:hover {
+        color: var(--cc-primary-accent);
+    }
+
+    // Active state underline
+    &.active {
+        color: var(--cc-primary-accent);
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--cc-primary-accent);
+        }
+    }
+}
+
+// ==========================================
+// BOOK MENU (Sidebar Navigation)
+// ==========================================
+
+.book-menu {
+    // background: var(--cc-off-white);
+    // border-right: 1px solid var(--cc-medium-gray);
+
+    // .book-menu-content {
+    //     padding: var(--cc-space-6) var(--cc-space-4);
+    // }
+
+    nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            margin: var(--cc-space-1) 0;
+        }
+    }
+
+    a {
+        display: flex;
+        align-items: center;
+        padding: var(--cc-space-3) var(--cc-space-4);
+        color: var(--cc-dark-gray);
+        text-decoration: none;
+        border-radius: var(--cc-border-radius-small);
+        transition: all var(--cc-transition-medium) var(--cc-easing-smooth);
+        font-family: var(--cc-font-body);
+        font-size: var(--cc-font-size-smaller);
+        line-height: 1.4;
+
+        &:hover {
+            background: var(--cc-white);
+            color: var(--cc-primary-accent);
+            transform: translateX(2px);
+            box-shadow: var(--cc-shadow-subtle);
+        }
+
+        &.active {
+            background: var(--cc-white);
+            color: var(--cc-primary-accent);
+            font-weight: var(--cc-font-weight-medium);
+            border-left: 3px solid var(--cc-primary-accent);
+            padding-left: calc(var(--cc-space-4) - 3px);
+            box-shadow: var(--cc-shadow-subtle);
+        }
+    }
+
+    // Nested menu items
+    ul ul {
+        // padding-left: var(--cc-space-8);
+        margin-top: var(--cc-space-1);
+        border-left: 2px solid var(--cc-accent-teal-15);
+        margin-left: var(--cc-space-4);
+    }
+
+    // Icon styling for smoother hover
+    img,
+    svg {
+        transition: all var(--cc-transition-medium) var(--cc-easing-smooth);
+        opacity: 0.7;
+    }
+
+    a:hover img,
+    a:hover svg,
+    a.active img,
+    a.active svg {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+}
+
+// ==========================================
+// MOBILE MENU TOGGLE
+// ==========================================
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: var(--cc-space-2);
+    color: var(--cc-black);
+
+    // Hamburger icon
+    span {
+        display: block;
+        width: 24px;
+        height: 2px;
+        background: var(--cc-black);
+        margin: 5px 0;
+        transition: all var(--cc-transition-normal) var(--cc-easing-standard);
+    }
+
+    &:hover span {
+        background: var(--cc-primary-accent);
+    }
+}
+
+@media screen and (max-width: 968px) {
+
+    // Ensure .book-header is visible and displays flex on mobile
+    .book-header {
+        display: flex !important;
+        padding: var(--cc-space-4) var(--cc-space-6);
+
+        // Make sure the containing flex div shows the labels
+        .flex {
+            width: 100%;
+        }
+
+        // Style the menu toggle labels
+        label {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            padding: var(--cc-space-3);
+            transition: all var(--cc-transition-normal);
+
+            &:hover {
+                opacity: 0.6;
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    .nav-links {
+        gap: var(--cc-space-6);
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    // Mobile Menu (Left Sidebar) Styles
+    .book-menu {
+
+        // The theme handles visibility and transforms via #menu-control
+        // Only override styling, not positioning
+        .book-menu-content {
+            background: var(--cc-white);
+            max-height: 100vh;
+            overflow-y: auto;
+            overflow-x: hidden;
+
+            // Smooth scrolling
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+        }
+    }
+
+    // Left menu overlay styling (theme provides the logic)
+    .book-menu-overlay {
+        z-index: 140;
+        background: rgba(0, 0, 0, 0.3);
+    }
+
+    // Mobile TOC (Right Sidebar) Styles
+    .book-toc {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 280px;
+        background: var(--cc-white);
+        box-shadow: -2px 0 12px rgba(0, 0, 0, 0.15);
+        transform: translateX(100%);
+        transition: transform 0.3s var(--cc-easing-smooth);
+        z-index: 150;
+        display: block !important;
+
+        .book-toc-content {
+            height: 100%;
+            max-height: 100vh;
+            overflow-y: auto;
+            overflow-x: hidden;
+            padding: var(--cc-space-8) var(--cc-space-6);
+
+            // Smooth scrolling
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+
+            // Ensure TOC items are visible and not collapsed
+            nav {
+                height: auto;
+
+                ul {
+                    display: block !important;
+                    padding-left: 0;
+
+                    li {
+                        margin: var(--cc-space-2) 0;
+
+                        a {
+                            display: block;
+                            padding: var(--cc-space-2) var(--cc-space-3);
+                            color: var(--cc-dark-gray);
+                            text-decoration: none;
+                            border-radius: var(--cc-border-radius-small);
+                            transition: all var(--cc-transition-normal);
+
+                            &:hover {
+                                background: var(--cc-light-gray);
+                                color: var(--cc-primary-accent);
+                            }
+                        }
+                    }
+
+                    // Nested items
+                    ul {
+                        padding-left: var(--cc-space-4);
+                        margin-top: var(--cc-space-1);
+
+                        li {
+                            margin: var(--cc-space-1) 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // When TOC is open  
+    #toc-control:checked~main {
+        .book-toc {
+            transform: translateX(0);
+        }
+
+        // Dim the page content (but not the overlay)
+        .book-page {
+            opacity: 0.25;
+        }
+
+        // The overlay needs to be above the dimmed content
+        .book-toc-overlay {
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 280px; // Leave space for the TOC sidebar
+            bottom: 0;
+            z-index: 145; // Above dimmed content but below TOC (150)
+            background: transparent;
+            cursor: pointer;
+            opacity: 1 !important; // Prevent dimming
+        }
+    }
+
+    // Base TOC overlay styling (hidden by default)
+    .book-toc-overlay {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+
+        &.mobile-menu-open {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: var(--cc-white);
+            padding: var(--cc-space-8);
+            box-shadow: var(--cc-shadow-medium);
+            border-top: 1px solid var(--cc-accent-teal-10);
+            gap: var(--cc-space-4);
+        }
+    }
+}
+
+// ==========================================
+// SEARCH BAR (if applicable)
+// ==========================================
+
+.nav-search {
+    position: relative;
+
+    input {
+        font-family: var(--cc-font-body);
+        font-size: var(--cc-font-size-small);
+        padding: var(--cc-space-2) var(--cc-space-4);
+        padding-left: var(--cc-space-10);
+        border: 1px solid var(--cc-medium-gray);
+        border-radius: var(--cc-border-radius-medium);
+        background: var(--cc-light-gray);
+        color: var(--cc-charcoal);
+        transition: all var(--cc-transition-normal);
+        width: 200px;
+
+        &:focus {
+            outline: none;
+            border-color: var(--cc-primary-accent);
+            background: var(--cc-white);
+            box-shadow: 0 0 0 3px var(--cc-accent-teal-15);
+        }
+
+        &::placeholder {
+            color: var(--cc-dark-gray);
+        }
+    }
+
+    // Search icon
+    &::before {
+        content: '🔍';
+        position: absolute;
+        left: var(--cc-space-3);
+        top: 50%;
+        transform: translateY(-50%);
+        opacity: 0.5;
+    }
+}
+
+// ==========================================
+// FIXES FOR MOBILE NAVIGATION
+// ==========================================
+
+// Prevent scroll-up on click by fixing the inputs
+#menu-control,
+#toc-control {
+    display: block !important; // Override .hidden to ensure position: fixed works
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    pointer-events: none;
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (max-width: 968px) {
+
+    // LEFT MENU (Mobile)
+    // Refactored to match TOC behavior: Translate the wrapper, keep width fixed.
+    // This prevents background clipping issues during animation.
+    .book-menu {
+        pointer-events: auto; // Wrapper is now the main interactable box
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 151; // Above everything (timeline/content)
+        width: 280px;
+        margin: 0 !important; // Override theme margins
+
+        // Transform the WRAPPER, not just the content
+        transform: translateX(-100%);
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+        // Remove background from wrapper (content has it)
+        background: transparent;
+
+        .book-menu-content {
+            position: relative; // Inside wrapper
+            width: 100%;
+            height: 100%;
+            background: var(--cc-white);
+            box-shadow: 2px 0 12px rgba(0, 0, 0, 0.1);
+
+            // Reset content transforms (wrapper handles it)
+            transform: none !important;
+            margin: 0 !important;
+        }
+    }
+
+    // LEFT MENU OPEN STATE
+    #menu-control:checked~main {
+        .book-menu {
+            transform: translateX(0); // Slide wrapper in
+        }
+
+        .book-menu-content {
+            box-shadow: 4px 0 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .book-menu-overlay {
+            display: block !important;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 150; // Below menu
+            backdrop-filter: blur(2px);
+            cursor: pointer;
+        }
+    }
+
+    // RIGHT TOC (Mobile)
+    // Overriding previous definition for safety and gap fix
+    .book-toc {
+        position: fixed !important;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 280px;
+        z-index: 151;
+        background: var(--cc-white);
+
+        // Ensure no gap
+        margin: 0 !important;
+
+        // Start state
+        transform: translateX(100%);
+        box-shadow: none;
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+        .book-toc-content {
+            padding: var(--cc-space-8) var(--cc-space-6);
+            height: 100%;
+            overflow-y: auto;
+        }
+    }
+
+    // RIGHT TOC OPEN STATE
+    #toc-control:checked~main {
+        .book-toc {
+            transform: translateX(0); // Flush with right edge
+            box-shadow: -4px 0 20px rgba(0, 0, 0, 0.2);
+        }
+
+        // Overlay for TOC
+        .book-toc-overlay {
+            display: block !important;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0; // Cover entire screen
+            bottom: 0;
+            z-index: 150; // Below TOC
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(2px);
+            opacity: 1 !important;
+        }
+    }
+}

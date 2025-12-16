@@ -1,0 +1,329 @@
+// ============================================
+// CONTROLLED CHAOS - BUTTONS & CTAs
+// ============================================
+
+// ==========================================
+// BASE BUTTON
+// ==========================================
+
+.book-hero .btn,
+.book-hero .button,
+.book-hero .cta-button,
+.book-hero a.book-btn {
+    display: inline-block !important;
+    font-family: var(--cc-font-ui) !important;
+    font-size: var(--cc-font-size-base) !important;
+    font-weight: var(--cc-font-weight-medium) !important;
+    text-decoration: none !important;
+    text-align: center !important;
+    padding: var(--cc-space-2) var(--cc-space-6) !important;
+    border-radius: var(--cc-border-radius-small) !important;
+    border: 2px solid !important;
+    cursor: pointer !important;
+    transition: all var(--cc-transition-medium) var(--cc-easing-smooth) !important;
+    position: relative !important;
+    overflow: hidden !important;
+    color: var(--color-link) !important;
+
+    &:hover {
+        color: var(--cc-accent-teal-50) !important;
+    }
+}
+
+.book-hero .btn:focus,
+.book-hero .button:focus,
+.book-hero .cta-button:focus,
+.book-hero a.book-btn:focus {
+    outline: none !important;
+    box-shadow: 0 0 0 3px var(--cc-accent-teal-30) !important;
+}
+
+.book-hero .btn:active,
+.book-hero .button:active,
+.book-hero .cta-button:active,
+.book-hero a.book-btn:active {
+    transform: translateY(1px) !important;
+}
+
+
+// ==========================================
+// PRIMARY BUTTON (Teal with glow)
+// ==========================================
+
+.btn-primary,
+.cta-button {
+    background: var(--cc-primary-accent);
+    color: var(--cc-white);
+    border-color: var(--cc-primary-accent);
+
+    // Glow effect backdrop
+    &::after {
+        content: '';
+        position: absolute;
+        inset: -2px;
+        background: var(--cc-gradient-teal);
+        opacity: 0;
+        filter: blur(8px);
+        transition: opacity var(--cc-transition-medium);
+        z-index: -1;
+    }
+
+    &:hover {
+        background: #3AACAF;
+        border-color: #3AACAF;
+        box-shadow: 0 4px 12px var(--cc-accent-teal-50);
+
+        &::after {
+            opacity: 0.7;
+        }
+    }
+
+    &:active {
+        background: #268B8E;
+    }
+}
+
+// ==========================================
+// SECONDARY BUTTON (Outline)
+// ==========================================
+
+.btn-secondary {
+    background: transparent;
+    color: var(--cc-primary-accent);
+    border-color: var(--cc-primary-accent);
+
+    &:hover {
+        background: var(--cc-primary-accent);
+        color: var(--cc-white);
+    }
+}
+
+// ==========================================
+// TERTIARY BUTTON (Ghost)
+// ==========================================
+
+.btn-tertiary,
+.btn-ghost {
+    background: transparent;
+    color: var(--cc-dark-gray);
+    border-color: transparent;
+
+    &:hover {
+        background: var(--cc-light-gray);
+        color: var(--cc-black);
+    }
+}
+
+// ==========================================
+// MINIMAL BUTTON (Text only)
+// ==========================================
+
+.btn-minimal {
+    background: transparent;
+    color: var(--cc-primary-accent);
+    border: none;
+    padding: var(--cc-space-2) var(--cc-space-4);
+
+    &:hover {
+        background: var(--cc-accent-teal-10);
+    }
+}
+
+// ==========================================
+// BUTTON SIZES
+// ==========================================
+
+.btn-small {
+    font-size: var(--cc-font-size-small);
+    padding: var(--cc-space-2) var(--cc-space-6);
+}
+
+.btn-large {
+    font-size: var(--cc-font-size-large);
+    padding: var(--cc-space-6) var(--cc-space-12);
+}
+
+// ==========================================
+// BUTTON WITH ICON
+// ==========================================
+
+.btn-icon {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--cc-space-3);
+
+    svg,
+    img {
+        width: 1.25em;
+        height: 1.25em;
+    }
+}
+
+.btn-icon-only {
+    padding: var(--cc-space-4);
+    width: 44px;
+    height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    svg,
+    img {
+        width: 1.5em;
+        height: 1.5em;
+    }
+}
+
+// ==========================================
+// BUTTON GROUP
+// ==========================================
+
+.btn-group {
+    display: inline-flex;
+    gap: var(--cc-space-3);
+    flex-wrap: wrap;
+
+    .btn {
+        margin: 0;
+    }
+}
+
+// Attached button group (no gap)
+.btn-group-attached {
+    gap: 0;
+
+    .btn {
+        border-radius: 0;
+
+        &:first-child {
+            border-top-left-radius: var(--cc-border-radius-small);
+            border-bottom-left-radius: var(--cc-border-radius-small);
+        }
+
+        &:last-child {
+            border-top-right-radius: var(--cc-border-radius-small);
+            border-bottom-right-radius: var(--cc-border-radius-small);
+        }
+
+        &:not(:last-child) {
+            border-right-width: 1px;
+        }
+    }
+}
+
+// ==========================================
+// BUTTON STATES
+// ==========================================
+
+.btn-disabled,
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.btn-loading {
+    position: relative;
+    color: transparent;
+    pointer-events: none;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 1em;
+        height: 1em;
+        border: 2px solid currentColor;
+        border-top-color: transparent;
+        border-radius: 50%;
+        animation: spin 0.6s linear infinite;
+    }
+}
+
+@keyframes spin {
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+// ==========================================
+// FLOATING ACTION BUTTON (FAB)
+// ==========================================
+
+.btn-fab {
+    position: fixed;
+    bottom: var(--cc-space-8);
+    right: var(--cc-space-8);
+    width: 56px;
+    height: 56px;
+    border-radius: var(--cc-border-radius-circle);
+    background: var(--cc-primary-accent);
+    color: var(--cc-white);
+    box-shadow: var(--cc-shadow-strong);
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: var(--cc-z-modal);
+
+    &:hover {
+        box-shadow: 0 8px 32px var(--cc-accent-teal-50);
+        transform: translateY(-2px);
+    }
+
+    svg,
+    img {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+// ==========================================
+// ACCENT BUTTON VARIANTS
+// ==========================================
+
+.btn-warm {
+    background: var(--cc-secondary-accent);
+    border-color: var(--cc-secondary-accent);
+    color: var(--cc-white);
+
+    &:hover {
+        background: #DDB57E;
+    }
+}
+
+.btn-rust {
+    background: var(--cc-tertiary-accent);
+    border-color: var(--cc-tertiary-accent);
+    color: var(--cc-white);
+
+    &:hover {
+        background: #D27A46;
+    }
+}
+
+// ==========================================
+// RESPONSIVE BUTTONS
+// ==========================================
+
+@media screen and (max-width: 768px) {
+    .btn {
+        padding: var(--cc-space-3) var(--cc-space-8);
+        font-size: var(--cc-font-size-small);
+    }
+
+    .btn-large {
+        font-size: var(--cc-font-size-base);
+        padding: var(--cc-space-5) var(--cc-space-10);
+    }
+
+    .btn-group {
+        width: 100%;
+
+        .btn {
+            flex: 1;
+        }
+    }
+}

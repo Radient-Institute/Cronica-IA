@@ -1,0 +1,366 @@
+// ============================================
+// CONTROLLED CHAOS - LAYOUTS
+// ============================================
+
+// ==========================================
+// CONTAINER SYSTEM
+// ==========================================
+
+.container,
+.content-wrapper {
+    max-width: var(--cc-container-max-width);
+    margin: 0 auto;
+    padding: 0 var(--cc-space-8);
+    width: 100%;
+}
+
+.container-fluid {
+    max-width: 100%;
+    padding: 0 var(--cc-space-8);
+}
+
+.container-narrow {
+    max-width: 800px;
+}
+
+.container-wide {
+    max-width: 1400px;
+}
+
+// ==========================================
+// SECTION SPACING
+// ==========================================
+
+.section {
+    padding: var(--cc-space-32) 0;
+    position: relative;
+
+    &-small {
+        padding: var(--cc-space-16) 0;
+    }
+
+    &-large {
+        padding: var(--cc-space-32) 0;
+    }
+}
+
+// ==========================================
+// GRID LAYOUTS
+// ==========================================
+
+.grid {
+    display: grid;
+    gap: var(--cc-space-8);
+
+    &-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    &-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    &-4 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    // Asymmetric grids for controlled chaos
+    &-2fr-1fr {
+        grid-template-columns: 2fr 1fr; // 70% content, 30% visual
+    }
+
+    &-1fr-2fr {
+        grid-template-columns: 1fr 2fr;
+    }
+
+    // Responsive grids
+    &-auto-fill {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+
+    &-auto-fit {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
+// ==========================================
+// FLEX LAYOUTS
+// ==========================================
+
+.flex {
+    display: flex;
+
+    &-center {
+        align-items: center;
+        justify-content: center;
+    }
+
+    &-between {
+        justify-content: space-between;
+    }
+
+    &-around {
+        justify-content: space-around;
+    }
+
+    &-start {
+        align-items: flex-start;
+    }
+
+    &-end {
+        align-items: flex-end;
+    }
+
+    &-column {
+        flex-direction: column;
+    }
+
+    &-wrap {
+        flex-wrap: wrap;
+    }
+
+    &-gap {
+        gap: var(--cc-space-8);
+    }
+
+    &-gap-small {
+        gap: var(--cc-space-4);
+    }
+
+    &-gap-large {
+        gap: var(--cc-space-12);
+    }
+}
+
+// ==========================================
+// COLLAGE ZONES (30% width, contained chaos)
+// ==========================================
+
+.collage-zone {
+    width: 30%;
+    position: relative;
+    isolation: isolate;
+
+    // Contained visual element
+    .collage-element {
+        width: 100%;
+        height: 100%;
+        opacity: 0.6;
+        filter: saturate(0.7) contrast(1.1);
+        mix-blend-mode: multiply;
+    }
+}
+
+// ==========================================
+// CONTENT ZONE (70% width, clean)
+// ==========================================
+
+.content-zone {
+    width: 70%;
+
+    // Generous breathing room
+    padding: var(--cc-space-16);
+    background: var(--cc-white);
+    position: relative;
+    z-index: var(--cc-z-base);
+}
+
+// ==========================================
+// SPLIT LAYOUT (Content + Visual)
+// ==========================================
+
+.split-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--cc-space-16);
+    align-items: center;
+
+    &-reverse {
+        grid-template-columns: 1fr 2fr;
+    }
+
+    &-equal {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+// ==========================================
+// TEXTURE OVERLAYS (Subtle backgrounds)
+// ==========================================
+
+.texture-overlay {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 80% 20%,
+            var(--cc-accent-teal-15) 0%,
+            transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.texture-overlay-left {
+    background: radial-gradient(circle at 20% 50%,
+            var(--cc-accent-teal-15) 0%,
+            transparent 50%);
+}
+
+.texture-overlay-center {
+    background: radial-gradient(circle at 50% 50%,
+            var(--cc-accent-teal-15) 0%,
+            transparent 60%);
+}
+
+// Pattern texture (very subtle)
+.texture-pattern {
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image: url('data:image/svg+xml,<svg width="20" height="20" xmlns="http://www.w3.org/2000/svg"><rect width="20" height="20" fill="none"/><circle cx="10" cy="10" r="1" fill="rgba(43,155,158,0.05)"/></svg>');
+        opacity: 0.3;
+        pointer-events: none;
+    }
+}
+
+// ==========================================
+// SPACIOUS LAYOUT (8rem spacing)
+// ==========================================
+
+.layout-spacious {
+    padding: var(--cc-space-32) 0;
+
+    >*+* {
+        margin-top: var(--cc-space-16);
+    }
+}
+
+// ==========================================
+// SIDEBAR LAYOUT
+// ==========================================
+
+.sidebar-layout {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: var(--cc-space-8);
+
+    .sidebar {
+        position: sticky;
+        top: var(--cc-space-8);
+        align-self: start;
+        max-height: calc(100vh - var(--cc-space-16));
+        overflow-y: auto;
+    }
+
+    .main-content {
+        min-width: 0; // Prevent overflow
+    }
+}
+
+// ==========================================
+// RESPONSIVE LAYOUTS
+// ==========================================
+
+@media screen and (max-width: 968px) {
+
+    .grid-2,
+    .grid-3,
+    .grid-4,
+    .grid-2fr-1fr,
+    .grid-1fr-2fr,
+    .split-layout,
+    .split-layout-reverse,
+    .split-layout-equal {
+        grid-template-columns: 1fr;
+    }
+
+    .collage-zone,
+    .content-zone {
+        width: 100%;
+    }
+
+    .sidebar-layout {
+        grid-template-columns: 1fr;
+
+        .sidebar {
+            position: static;
+            max-height: none;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .container,
+    .content-wrapper,
+    .container-fluid {
+        padding: 0 var(--cc-space-4);
+    }
+
+    .section {
+        padding: var(--cc-space-16) 0;
+
+        &-large {
+            padding: var(--cc-space-24) 0;
+        }
+    }
+
+    .grid {
+        gap: var(--cc-space-4);
+    }
+
+    .flex-gap {
+        gap: var(--cc-space-4);
+    }
+}
+
+// ==========================================
+// ASPECT RATIO CONTAINERS
+// ==========================================
+
+.aspect-16-9 {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; // 9/16 = 0.5625
+    overflow: hidden;
+
+    >* {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.aspect-4-3 {
+    position: relative;
+    width: 100%;
+    padding-bottom: 75%; // 3/4 = 0.75
+    overflow: hidden;
+
+    >* {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.aspect-square {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    overflow: hidden;
+
+    >* {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}

@@ -1,0 +1,66 @@
+// ============================================
+// NOCTURNE OPULENCE - DESIGN TOKENS
+// ============================================
+
+:root {
+    // Palette
+    --noir-ink: #e6e7ee;
+    --noir-muted: #b4b8c4;
+    --noir-soft: #8a90a0;
+    --noir-charcoal: #0b0d14;
+    --noir-void: #05060c;
+    --noir-panel: #0c0f16;
+    --noir-panel-2: #10131b;
+    --noir-border: rgba(255, 255, 255, 0.06);
+    --noir-divider: rgba(255, 255, 255, 0.03);
+    --noir-tint: linear-gradient(140deg, rgba(5, 6, 10, 0.94), rgba(10, 12, 18, 0.96));
+
+    // Accents (use sparingly)
+    --noir-crimson: #dc143c;
+    --noir-crimson-soft: rgba(220, 20, 60, 0.1);
+    --noir-gold: #d4af37;
+    --noir-gold-soft: rgba(212, 175, 55, 0.16);
+
+    // Typography
+    --noir-font-heading: 'Playfair Display', 'Times New Roman', serif;
+    --noir-font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --noir-font-mono: 'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace;
+    --noir-letter-wide: 0.08em;
+    --noir-letter-tight: -0.02em;
+
+    // Spacing (fluid)
+    --noir-space-1: 0.25rem;
+    --noir-space-2: 0.5rem;
+    --noir-space-3: 0.75rem;
+    --noir-space-4: 1rem;
+    --noir-space-5: 1.25rem;
+    --noir-space-6: 1.5rem;
+    --noir-space-8: 2rem;
+    --noir-space-10: 2.5rem;
+    --noir-space-12: 3rem;
+    --noir-space-16: 4rem;
+    --noir-space-20: 5rem;
+
+    // Layout
+    --noir-max-width: 1400px;
+    --noir-max-wide: 1400px;
+    --noir-radius-sm: 8px;
+    --noir-radius-md: 14px;
+    --noir-radius-lg: 22px;
+
+    // Effects & motion
+    --noir-shadow-soft: 0 20px 60px rgba(0, 0, 0, 0.45);
+    --noir-shadow-strong: 0 28px 80px rgba(0, 0, 0, 0.55);
+    --noir-glow: 0 0 0 1px rgba(220, 20, 60, 0.3), 0 16px 40px rgba(212, 175, 55, 0.18);
+    --noir-transition-fast: 120ms ease-out;
+    --noir-transition: 240ms cubic-bezier(0.4, 0, 0.2, 1);
+    --noir-transition-slow: 480ms cubic-bezier(0.4, 0, 0.2, 1);
+    --noir-blur: 18px;
+    --noir-backdrop: saturate(120%) blur(18px);
+
+    // Z-index
+    --noir-z-base: 1;
+    --noir-z-nav: 120;
+    --noir-z-overlay: 160;
+    --noir-z-modal: 200;
+}

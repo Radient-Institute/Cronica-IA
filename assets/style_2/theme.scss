@@ -1,0 +1,128 @@
+// ============================================
+// NOCTURNE OPULENCE THEME
+// ============================================
+
+// ============================================
+// GOOGLE FONTS
+// ============================================
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap');
+
+// ============================================
+// DESIGN SYSTEM
+// ============================================
+@import 'variables';
+@import 'typography';
+
+// Components
+@import 'navigation';
+@import 'hero';
+@import 'cards';
+@import 'buttons';
+
+// Layouts & Utilities
+@import 'layouts';
+@import 'utils';
+
+// ============================================
+// GLOBAL STYLES
+// ============================================
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    min-height: 100vh;
+}
+
+.book-icon {
+    color: var(--noir-ink) !important;
+    font-variation-settings: 'FILL' 0, 'wght' 550, 'GRAD' 0, 'opsz' 24;
+    text-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+::selection {
+    background: rgba(220, 20, 60, 0.35);
+    color: #fff;
+}
+
+::-moz-selection {
+    background: rgba(220, 20, 60, 0.35);
+    color: #fff;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.04);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 999px;
+
+    &:hover {
+        background: rgba(220, 20, 60, 0.35);
+    }
+}
+
+:focus-visible {
+    outline: 2px solid rgba(220, 20, 60, 0.6);
+    outline-offset: 2px;
+}
+
+img,
+video,
+svg {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--noir-radius-sm);
+}
+
+input,
+textarea,
+select {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--noir-border);
+    color: var(--noir-ink);
+    border-radius: var(--noir-radius-sm);
+    padding: var(--noir-space-3);
+    transition: border-color var(--noir-transition), box-shadow var(--noir-transition);
+
+    &:focus {
+        border-color: rgba(220, 20, 60, 0.4);
+        box-shadow: 0 0 0 3px rgba(220, 20, 60, 0.18);
+        outline: none;
+    }
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--noir-border);
+    border-radius: var(--noir-radius-sm);
+    overflow: hidden;
+
+    th,
+    td {
+        padding: var(--noir-space-3) var(--noir-space-4);
+        border-bottom: 1px solid var(--noir-divider);
+        color: var(--noir-ink);
+    }
+
+    th {
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        font-size: 0.85rem;
+        color: var(--noir-soft);
+        background: rgba(255, 255, 255, 0.03);
+    }
+}

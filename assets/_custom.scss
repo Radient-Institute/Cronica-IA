@@ -1,0 +1,68 @@
+/* Image Styling Overrides */
+.markdown .book-image img {
+
+    /* Sizes */
+    &.img-small {
+        max-width: 250px;
+    }
+
+    &.img-medium {
+        max-width: 500px;
+    }
+
+    &.img-full {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Alignment */
+    &.img-center {
+        display: block;
+        margin: 0 auto;
+    }
+
+    &.img-left {
+        float: left;
+        margin-right: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    &.img-right {
+        float: right;
+        margin-left: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    /* Specific Images */
+    &.elon-image {
+        max-width: 300px;
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+/* Reset max-width when image is zoomed (checked state) */
+.markdown .book-image input:checked+img {
+    max-width: 90%;
+}
+
+/* Custom styles for mobile menu */
+@media screen and (max-width: 768px) {
+
+    .markdown .book-image img {
+
+        /* Sizes */
+        &.img-small {
+            max-width: 100%;
+        }
+
+        &.img-medium {
+            max-width: 100%;
+        }
+
+        &.img-full {
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+}

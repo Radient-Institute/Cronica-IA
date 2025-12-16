@@ -1,0 +1,172 @@
+// ============================================
+// NOCTURNE OPULENCE - TYPOGRAPHY & TEXTURE
+// ============================================
+
+html {
+    background: #05060c !important; // Prevent white flash between navigations
+}
+
+body {
+    font-family: var(--noir-font-body);
+    background:
+        radial-gradient(circle at 20% 20%, rgba(220, 20, 60, 0.04), transparent 24%),
+        radial-gradient(circle at 80% 10%, rgba(212, 175, 55, 0.05), transparent 28%),
+        linear-gradient(180deg, rgba(5, 6, 10, 0.96), rgba(10, 12, 18, 0.98)) !important;
+    background-color: #05060c !important;
+    color: var(--noir-muted);
+    letter-spacing: 0.01em;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--noir-font-heading);
+    color: var(--noir-ink);
+    letter-spacing: var(--noir-letter-tight);
+    margin: 0 0 var(--noir-space-5) 0;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: clamp(2.8rem, 6vw, 4.8rem);
+    background: linear-gradient(135deg, var(--noir-crimson), var(--noir-gold));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    line-height: 1.05;
+}
+
+h2 {
+    font-size: clamp(2.1rem, 4vw, 3.2rem);
+    position: relative;
+    padding-bottom: var(--noir-space-3);
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 64px;
+        height: 2px;
+        background: linear-gradient(90deg, var(--noir-crimson), transparent);
+    }
+}
+
+h3 {
+    font-size: clamp(1.6rem, 3vw, 2.4rem);
+}
+
+p {
+    color: var(--noir-muted);
+    max-width: 70ch;
+    margin: 0 0 var(--noir-space-5) 0;
+}
+
+small,
+.text-small {
+    font-size: 0.92rem;
+    color: var(--noir-soft);
+    letter-spacing: 0.02em;
+}
+
+strong,
+b {
+    color: var(--noir-ink);
+    font-weight: 700;
+}
+
+a {
+    color: var(--noir-ink);
+    text-decoration: none;
+    position: relative;
+    transition: color var(--noir-transition), border-color var(--noir-transition), text-shadow var(--noir-transition);
+}
+
+a[href],
+a[role="button"] {
+    color: var(--noir-ink) !important;
+    border-bottom: 1px solid rgba(220, 20, 60, 0.35);
+}
+
+a[href]:not(.btn):not(.button):not(.cta-button):not(.book-btn):hover,
+a[role="button"]:not(.btn):not(.button):not(.cta-button):not(.book-btn):hover {
+    color: var(--noir-crimson) !important;
+    border-color: rgba(212, 175, 55, 0.65);
+    text-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+// Keep nav + utility links clean
+.nav-link,
+.logo,
+.book-brand,
+.book-menu a,
+.book-toc a,
+.book-footer a,
+.btn,
+.button,
+.cta-button,
+a.book-btn {
+    text-decoration: none !important;
+    border: none !important;
+    box-shadow: none;
+    background-image: none;
+}
+
+// Markdown/content links with single luxury underline
+.markdown a:not(.btn):not(.button):not(.cta-button):not(.book-btn) {
+    color: var(--noir-ink) !important;
+    border-bottom: 1px solid rgba(220, 20, 60, 0.4);
+    text-decoration: none !important;
+    padding-bottom: 1px;
+    transition: color var(--noir-transition), border-color var(--noir-transition), background-size var(--noir-transition);
+    background-image: linear-gradient(90deg, rgba(220, 20, 60, 0.5), rgba(212, 175, 55, 0.4));
+    background-size: 0 1px;
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+
+    &:hover {
+        color: var(--noir-crimson) !important;
+        border-color: transparent !important;
+        background-size: 100% 1px;
+    }
+
+    &:visited {
+        color: var(--noir-ink) !important;
+    }
+}
+
+blockquote {
+    border-inline-start: 3px solid var(--noir-crimson);
+    padding: var(--noir-space-4) var(--noir-space-5);
+    margin: var(--noir-space-8) 0;
+    color: var(--noir-soft);
+    background: linear-gradient(90deg, rgba(220, 20, 60, 0.08), rgba(15, 17, 23, 0.4));
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+code,
+pre {
+    font-family: var(--noir-font-mono);
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: var(--noir-space-2) var(--noir-space-3);
+    border-radius: var(--noir-radius-sm);
+    color: var(--noir-ink);
+}
+
+pre {
+    padding: var(--noir-space-5);
+    overflow-x: auto;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid var(--noir-divider);
+    margin: var(--noir-space-8) 0;
+}

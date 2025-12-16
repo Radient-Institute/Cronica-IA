@@ -1,0 +1,172 @@
+// ============================================
+// SKYLINE REVERIE - TYPOGRAPHY
+// ============================================
+
+body {
+    font-family: var(--sr-font-body);
+    background: radial-gradient(circle at 20% 20%, rgba(122, 197, 211, 0.18), transparent 28%),
+        radial-gradient(circle at 80% 10%, rgba(232, 139, 139, 0.12), transparent 32%),
+        linear-gradient(180deg, rgba(245, 230, 211, 0.9), rgba(255, 248, 240, 0.9));
+    color: var(--sr-ink-soft);
+    letter-spacing: 0.01em;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--sr-font-heading);
+    color: var(--sr-ink);
+    letter-spacing: 0.04em;
+    margin: 0 0 var(--sr-space-5) 0;
+    line-height: 1.2;
+    text-transform: none;
+}
+
+h1 {
+    font-size: clamp(2.4rem, 5vw, 3.9rem);
+    position: relative;
+    padding-bottom: var(--sr-space-3);
+    display: inline-block;
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 6px;
+        background: linear-gradient(90deg, var(--sr-coral-primary), var(--sr-sky-primary));
+        box-shadow: 4px 4px 0 var(--sr-cream);
+    }
+}
+
+h2 {
+    font-size: clamp(1.9rem, 3.6vw, 3rem);
+}
+
+h3 {
+    font-size: clamp(1.5rem, 3vw, 2.3rem);
+}
+
+p {
+    color: var(--sr-ink-muted);
+    max-width: 70ch;
+    margin: 0 0 var(--sr-space-5) 0;
+}
+
+small,
+.text-small {
+    font-size: 0.9rem;
+    color: rgba(19, 39, 51, 0.7);
+    letter-spacing: 0.02em;
+}
+
+strong,
+b {
+    color: var(--sr-ink);
+    font-weight: 700;
+}
+
+a {
+    color: var(--sr-ink);
+    text-decoration: none;
+    position: relative;
+    transition: color var(--sr-transition-normal), text-shadow var(--sr-transition-normal);
+
+    &:hover {
+        color: var(--sr-coral-primary);
+        text-shadow: 0 0 0 rgba(0, 0, 0, 0), 2px 2px 0 var(--sr-cream);
+    }
+}
+
+// Override base theme link colors
+a[href],
+a[role="button"] {
+    color: var(--sr-ink) !important;
+    text-decoration: none !important;
+    border-bottom: 2px solid rgba(232, 139, 139, 0.35);
+    transition: border-color var(--sr-transition-normal), color var(--sr-transition-normal);
+}
+
+a[href]:not(.btn):not(.button):not(.cta-button):not(.book-btn):hover,
+a[role="button"]:not(.btn):not(.button):not(.cta-button):not(.book-btn):hover {
+    color: var(--sr-coral-primary) !important;
+    border-color: rgba(91, 180, 196, 0.55);
+}
+
+// Keep nav, buttons, icons clean
+.nav-link,
+.logo,
+.book-brand,
+.book-menu a,
+.book-toc a,
+.book-footer a,
+.book-footer,
+.btn,
+.button,
+.cta-button,
+a.book-btn {
+    text-decoration: none !important;
+    border: none !important;
+    box-shadow: none;
+    background-image: none;
+}
+
+// Markdown/content links with a single technicolor underline
+.markdown a:not(.btn):not(.button):not(.cta-button):not(.book-btn) {
+    color: var(--sr-ink) !important;
+    border-bottom: 2px solid rgba(91, 180, 196, 0.55);
+    text-decoration: none !important;
+    padding-bottom: 1px;
+    transition: color var(--sr-transition-normal), border-color var(--sr-transition-normal), background-position var(--sr-transition-normal);
+    background-image: linear-gradient(90deg, rgba(232, 139, 139, 0.6), rgba(122, 197, 211, 0.6));
+    background-size: 0 2px;
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+
+    &:hover {
+        color: var(--sr-coral-primary) !important;
+        border-color: transparent !important;
+        background-size: 100% 2px;
+    }
+
+    &:visited {
+        color: var(--sr-ink) !important;
+    }
+}
+
+blockquote {
+    border-inline-start: 3px solid var(--sr-sky-primary);
+    padding: var(--sr-space-4) var(--sr-space-5);
+    margin: var(--sr-space-8) 0;
+    color: var(--sr-ink-muted);
+    background: linear-gradient(90deg, rgba(91, 180, 196, 0.08), rgba(232, 139, 139, 0.04));
+    box-shadow: 4px 4px 0 var(--sr-cream);
+}
+
+code,
+pre {
+    font-family: var(--sr-font-mono);
+    background: rgba(19, 39, 51, 0.06);
+    border: 1px solid rgba(19, 39, 51, 0.12);
+    padding: var(--sr-space-2) var(--sr-space-3);
+    border-radius: 2px;
+    color: var(--sr-ink);
+}
+
+pre {
+    padding: var(--sr-space-5);
+    overflow-x: auto;
+}
+
+@media screen and (max-width: 768px) {
+    .markdown h1 {
+        font-size: clamp(2rem, 6vw, 2.6rem) !important;
+        margin-bottom: var(--sr-space-8);
+    }
+}

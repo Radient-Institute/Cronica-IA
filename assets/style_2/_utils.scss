@@ -1,0 +1,79 @@
+// ============================================
+// NOCTURNE OPULENCE - UTILITIES
+// ============================================
+
+.eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 0.8rem;
+    color: var(--noir-soft);
+    display: inline-flex;
+    align-items: center;
+    gap: var(--noir-space-2);
+
+    &::before {
+        content: '';
+        width: 20px;
+        height: 1px;
+        background: linear-gradient(90deg, var(--noir-crimson), transparent);
+    }
+}
+
+.divider {
+    width: 100%;
+    height: 1px;
+    background: var(--noir-divider);
+    margin: var(--noir-space-6) 0;
+}
+
+.glass-panel {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--noir-border);
+    backdrop-filter: var(--noir-backdrop);
+    -webkit-backdrop-filter: var(--noir-backdrop);
+    border-radius: var(--noir-radius-md);
+    box-shadow: var(--noir-shadow-soft);
+}
+
+.muted {
+    color: var(--noir-soft);
+}
+
+.accent {
+    color: var(--noir-crimson);
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--noir-space-2);
+    padding: var(--noir-space-2) var(--noir-space-3);
+    border-radius: 999px;
+    background: rgba(220, 20, 60, 0.12);
+    color: var(--noir-crimson);
+    border: 1px solid rgba(220, 20, 60, 0.35);
+}
+
+.book-search input {
+    background: rgba(255, 255, 255, 0.04) !important;
+    border: 1px solid var(--noir-border) !important;
+    color: var(--noir-ink) !important;
+    border-radius: var(--noir-radius-sm);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+
+    &::placeholder {
+        color: var(--noir-soft);
+    }
+}
+
+.book-footer {
+    color: var(--noir-soft);
+
+    a {
+        color: var(--noir-ink) !important;
+
+        &:hover {
+            color: var(--noir-crimson) !important;
+        }
+    }
+}

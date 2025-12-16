@@ -1,0 +1,165 @@
+// ============================================
+// CONTROLLED CHAOS DESIGN SYSTEM VARIABLES
+// ============================================
+// Minimalism (80%) + Collage Aesthetic (20%)
+
+:root {
+    // ==========================================
+    // COLOR PALETTE
+    // ==========================================
+
+    // Minimalist Base (90% usage)
+    --cc-white: #FFFFFF;
+    --cc-off-white: #FAFAFA;
+    --cc-light-gray: #F8F9FA;
+    --cc-medium-gray: #E8E8E8;
+    --cc-dark-gray: #7F8C8D;
+    --cc-charcoal: #2C3E50;
+    --cc-black: #1C2833;
+
+    // Collage Accents (10% usage)
+    --cc-primary-accent: #2B9B9E; // Teal - main CTA
+    --cc-secondary-accent: #D4A574; // Warm tan - highlights
+    --cc-tertiary-accent: #C86A3C; // Rust - rare emphasis
+
+    // Derived colors with transparency
+    --cc-accent-teal-10: rgba(43, 155, 158, 0.1);
+    --cc-accent-teal-15: rgba(43, 155, 158, 0.15);
+    --cc-accent-teal-30: rgba(43, 155, 158, 0.3);
+    --cc-accent-teal-50: rgba(43, 155, 158, 0.5);
+    --cc-accent-teal-70: rgba(43, 155, 158, 0.7);
+    --cc-accent-teal-80: rgba(43, 155, 158, 0.8);
+
+    --cc-accent-warm-30: rgba(212, 165, 116, 0.3);
+    --cc-accent-rust-30: rgba(200, 106, 60, 0.3);
+
+    // Gradient for glow effects
+    --cc-gradient-teal: linear-gradient(45deg, #2B9B9E, #4ECDC4);
+
+    // ==========================================
+    // TYPOGRAPHY
+    // ==========================================
+
+    // Font Families
+    --cc-font-heading: 'Bebas Neue', sans-serif;
+    --cc-font-ui: 'Montserrat', sans-serif;
+    --cc-font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+    // Font Sizes
+    --cc-font-size-base: 1rem; // 16px
+    --cc-font-size-small: 0.875rem; // 14px
+    --cc-font-size-smaller: 0.75rem; // 12px
+    --cc-font-size-large: 1.125rem; // 18px
+
+    // Heading Sizes
+    --cc-font-size-h1: 5rem; // 80px - Hero
+    --cc-font-size-h2: 3.5rem; // 56px
+    --cc-font-size-h3: 2.5rem; // 40px
+    --cc-font-size-h4: 2rem; // 32px
+    --cc-font-size-h5: 1.5rem; // 24px
+    --cc-font-size-h6: 1.25rem; // 20px
+
+    // Font Weights
+    --cc-font-weight-light: 300;
+    --cc-font-weight-normal: 400;
+    --cc-font-weight-medium: 500;
+    --cc-font-weight-bold: 700;
+
+    // Line Heights
+    --cc-line-height-tight: 1;
+    --cc-line-height-snug: 1.2;
+    --cc-line-height-normal: 1.6;
+    --cc-line-height-relaxed: 1.7;
+
+    // Letter Spacing
+    --cc-letter-spacing-tight: -0.02em;
+    --cc-letter-spacing-normal: 0;
+    --cc-letter-spacing-wide: 0.02em;
+    --cc-letter-spacing-wider: 0.05em;
+
+    // ==========================================
+    // SPACING SYSTEM (8px grid)
+    // ==========================================
+
+    --cc-space-1: 0.25rem; // 4px
+    --cc-space-2: 0.5rem; // 8px
+    --cc-space-3: 0.75rem; // 12px
+    --cc-space-4: 1rem; // 16px
+    --cc-space-5: 1.25rem; // 20px
+    --cc-space-6: 1.5rem; // 24px
+    --cc-space-8: 2rem; // 32px
+    --cc-space-10: 2.5rem; // 40px
+    --cc-space-12: 3rem; // 48px
+    --cc-space-16: 4rem; // 64px
+    --cc-space-20: 5rem; // 80px
+    --cc-space-24: 6rem; // 96px
+    --cc-space-32: 8rem; // 128px
+
+    // ==========================================
+    // LAYOUT
+    // ==========================================
+
+    --cc-container-max-width: 1400px;
+    --cc-border-radius-minimal: 2px;
+    --cc-border-radius-small: 4px;
+    --cc-border-radius-medium: 8px;
+    --cc-border-radius-large: 16px;
+    --cc-border-radius-circle: 50%;
+
+    // ==========================================
+    // ANIMATION & TRANSITIONS
+    // ==========================================
+
+    --cc-transition-fast: 0.1s;
+    --cc-transition-normal: 0.2s;
+    --cc-transition-medium: 0.3s;
+    --cc-transition-slow: 0.4s;
+
+    --cc-easing-standard: ease;
+    --cc-easing-smooth: cubic-bezier(0.4, 0.0, 0.2, 1);
+    --cc-easing-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    // ==========================================
+    // EFFECTS
+    // ==========================================
+
+    --cc-shadow-subtle: 0 2px 8px rgba(0, 0, 0, 0.05);
+    --cc-shadow-medium: 0 4px 16px rgba(0, 0, 0, 0.08);
+    --cc-shadow-strong: 0 8px 24px rgba(0, 0, 0, 0.12);
+    --cc-shadow-accent: 0 8px 24px var(--cc-accent-teal-30);
+
+    --cc-blur-subtle: 10px;
+    --cc-blur-medium: 20px;
+    --cc-blur-strong: 40px;
+
+    // ==========================================
+    // Z-INDEX SCALE
+    // ==========================================
+
+    --cc-z-base: 1;
+    --cc-z-overlay: 10;
+    --cc-z-dropdown: 100;
+    --cc-z-modal: 1000;
+    --cc-z-tooltip: 10000;
+}
+
+// ==========================================
+// DARK MODE OVERRIDES
+// ==========================================
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --cc-white: #1C2833;
+        --cc-off-white: #2C3E50;
+        --cc-light-gray: #34495E;
+        --cc-medium-gray: #4A5F7F;
+        --cc-dark-gray: #95A5A6;
+        --cc-charcoal: #ECF0F1;
+        --cc-black: #FFFFFF;
+
+        // Adjust shadows for dark mode
+        --cc-shadow-subtle: 0 2px 8px rgba(0, 0, 0, 0.3);
+        --cc-shadow-medium: 0 4px 16px rgba(0, 0, 0, 0.4);
+        --cc-shadow-strong: 0 8px 24px rgba(0, 0, 0, 0.5);
+    }
+}

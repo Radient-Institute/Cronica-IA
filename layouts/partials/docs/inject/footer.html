@@ -1,0 +1,27 @@
+<script>
+    (function () {
+        const selectedStyle = localStorage.getItem('site-style');
+        if (!selectedStyle) return;
+
+        // Select all banner images that might have the placeholder
+        const bannerImages = document.querySelectorAll('.book-banner-image');
+        bannerImages.forEach(img => {
+            let src = img.getAttribute('src');
+            // Check for the placeholder _din_style
+            if (src.includes('_din_style')) {
+                const newSrc = src.replace('_din_style', selectedStyle);
+                img.setAttribute('src', newSrc);
+            }
+        });
+
+        // Handle landing video with _din_style placeholder (uses data-src to prevent wrong image loading)
+        const landingVideo = document.querySelector('.bg-landing-video');
+        if (landingVideo) {
+            let dataSrc = landingVideo.getAttribute('data-src');
+            if (dataSrc && dataSrc.includes('_din_style')) {
+                const newSrc = dataSrc.replace('_din_style', selectedStyle);
+                landingVideo.setAttribute('src', newSrc);
+            }
+        }
+    })();
+</script>

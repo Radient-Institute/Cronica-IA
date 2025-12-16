@@ -1,0 +1,109 @@
+// ============================================
+// SKYLINE REVERIE - BUTTONS
+// ============================================
+
+.btn,
+.button,
+.cta-button,
+a.book-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--sr-space-3);
+    padding: var(--sr-space-3) var(--sr-space-6);
+    border: 2px solid var(--sr-sky-primary) !important;
+    background: var(--sr-off-white) !important;
+    color: var(--sr-ink) !important;
+    text-transform: uppercase;
+    letter-spacing: var(--sr-letter-spacing-wide);
+    font-weight: 600;
+    font-family: var(--sr-font-body);
+    text-decoration: none !important;
+    cursor: pointer;
+    transition: all var(--sr-transition-normal);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 4px 4px 0 var(--sr-cream);
+}
+
+.btn:hover,
+.button:hover,
+.cta-button:hover,
+a.book-btn:hover {
+    border-color: var(--sr-coral-primary) !important;
+    color: var(--sr-coral-primary) !important;
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 var(--sr-coral-primary), 10px 10px 0 var(--sr-cream);
+}
+
+.btn:focus-visible,
+.button:focus-visible,
+.cta-button:focus-visible,
+a.book-btn:focus-visible {
+    outline: 2px solid rgba(91, 180, 196, 0.8);
+    outline-offset: 2px;
+}
+
+// Primary Outline (default)
+.btn-primary,
+.cta-button {
+    border-color: var(--sr-sky-primary) !important;
+    color: var(--sr-ink) !important;
+}
+
+// Retro Accent
+.btn-luxury,
+.cta-luxury {
+    background: linear-gradient(90deg, var(--sr-coral-primary), var(--sr-sky-primary)) !important;
+    color: #ffffff !important;
+    border: none;
+    position: relative;
+    box-shadow: 0 0 0 2px rgba(11, 27, 36, 0.9), 4px 4px 0 var(--sr-cream);
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        background: rgba(255, 248, 240, 0.22);
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        transition: width var(--sr-transition-slow), height var(--sr-transition-slow);
+    }
+
+    &:hover::before {
+        width: 240px;
+        height: 240px;
+    }
+}
+
+// Ghost
+.btn-ghost {
+    border-color: rgba(11, 27, 36, 0.18) !important;
+    background: transparent !important;
+    color: rgba(11, 27, 36, 0.7) !important;
+
+    &:hover {
+        border-color: var(--sr-sky-primary) !important;
+        background: rgba(91, 180, 196, 0.1) !important;
+        color: var(--sr-ink) !important;
+    }
+}
+
+// Sizes
+.btn-small {
+    padding: var(--sr-space-2) var(--sr-space-4);
+    font-size: 0.88rem;
+}
+
+.btn-large {
+    padding: var(--sr-space-4) var(--sr-space-8);
+    font-size: 1rem;
+}
+
+
+.landing-social-container {
+    margin: 0 0 var(--sr-space-5) !important;
+}

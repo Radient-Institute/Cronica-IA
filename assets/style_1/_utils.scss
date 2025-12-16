@@ -1,0 +1,559 @@
+// ============================================
+// CONTROLLED CHAOS - UTILITY CLASSES
+// ============================================
+
+// ==========================================
+// COLLAGE ACCENT ELEMENTS
+// ==========================================
+
+.collage-accent {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    opacity: 0.15;
+    mix-blend-mode: multiply;
+    filter: grayscale(70%);
+    pointer-events: none;
+    z-index: 0;
+
+    &-top-right {
+        top: 0;
+        right: 0;
+        transform: translate(30%, -30%);
+    }
+
+    &-top-left {
+        top: 0;
+        left: 0;
+        transform: translate(-30%, -30%);
+    }
+
+    &-bottom-right {
+        bottom: 0;
+        right: 0;
+        transform: translate(30%, 30%);
+    }
+
+    &-bottom-left {
+        bottom: 0;
+        left: 0;
+        transform: translate(-30%, 30%);
+    }
+
+    &-center {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+// ==========================================
+// GLASSMORPHISM
+// ==========================================
+
+.glassmorphic {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(var(--cc-blur-subtle));
+    -webkit-backdrop-filter: blur(var(--cc-blur-subtle));
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.glassmorphic-dark {
+    background: rgba(28, 40, 51, 0.9);
+    backdrop-filter: blur(var(--cc-blur-medium));
+    -webkit-backdrop-filter: blur(var(--cc-blur-medium));
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+// ==========================================
+// GLOW EFFECTS
+// ==========================================
+
+.glow-teal {
+    box-shadow: 0 0 20px var(--cc-accent-teal-30);
+
+    &:hover {
+        box-shadow: 0 0 30px var(--cc-accent-teal-50);
+    }
+}
+
+.glow-warm {
+    box-shadow: 0 0 20px var(--cc-accent-warm-30);
+}
+
+.glow-rust {
+    box-shadow: 0 0 20px var(--cc-accent-rust-30);
+}
+
+// ==========================================
+// BACKGROUND UTILITIES
+// ==========================================
+
+.bg-white {
+    background-color: var(--cc-white);
+}
+
+.bg-off-white {
+    background-color: var(--cc-off-white);
+}
+
+.bg-light {
+    background-color: var(--cc-light-gray);
+}
+
+.bg-medium {
+    background-color: var(--cc-medium-gray);
+}
+
+.bg-dark {
+    background-color: var(--cc-charcoal);
+}
+
+.bg-black {
+    background-color: var(--cc-black);
+}
+
+.bg-teal {
+    background-color: var(--cc-primary-accent);
+}
+
+.bg-warm {
+    background-color: var(--cc-secondary-accent);
+}
+
+.bg-rust {
+    background-color: var(--cc-tertiary-accent);
+}
+
+// Gradient backgrounds
+.bg-gradient-teal {
+    background: var(--cc-gradient-teal);
+}
+
+.bg-gradient-subtle {
+    background: linear-gradient(to bottom,
+            var(--cc-white) 0%,
+            var(--cc-off-white) 100%);
+}
+
+// ==========================================
+// TEXT COLOR UTILITIES
+// ==========================================
+
+.text-white {
+    color: var(--cc-white);
+}
+
+.text-black {
+    color: var(--cc-black);
+}
+
+.text-charcoal {
+    color: var(--cc-charcoal);
+}
+
+.text-gray {
+    color: var(--cc-dark-gray);
+}
+
+.text-light-gray {
+    color: var(--cc-medium-gray);
+}
+
+.text-teal {
+    color: var(--cc-primary-accent);
+}
+
+.text-warm {
+    color: var(--cc-secondary-accent);
+}
+
+.text-rust {
+    color: var(--cc-tertiary-accent);
+}
+
+// ==========================================
+// SPACING UTILITIES
+// ==========================================
+
+// Margin utilities
+.m-0 {
+    margin: 0;
+}
+
+.m-1 {
+    margin: var(--cc-space-1);
+}
+
+.m-2 {
+    margin: var(--cc-space-2);
+}
+
+.m-4 {
+    margin: var(--cc-space-4);
+}
+
+.m-8 {
+    margin: var(--cc-space-8);
+}
+
+.m-16 {
+    margin: var(--cc-space-16);
+}
+
+.mt-0 {
+    margin-top: 0;
+}
+
+.mt-2 {
+    margin-top: var(--cc-space-2);
+}
+
+.mt-4 {
+    margin-top: var(--cc-space-4);
+}
+
+.mt-8 {
+    margin-top: var(--cc-space-8);
+}
+
+.mt-16 {
+    margin-top: var(--cc-space-16);
+}
+
+.mb-0 {
+    margin-bottom: 0;
+}
+
+.mb-2 {
+    margin-bottom: var(--cc-space-2);
+}
+
+.mb-4 {
+    margin-bottom: var(--cc-space-4);
+}
+
+.mb-8 {
+    margin-bottom: var(--cc-space-8);
+}
+
+.mb-16 {
+    margin-bottom: var(--cc-space-16);
+}
+
+// Padding utilities
+.p-0 {
+    padding: 0;
+}
+
+.p-2 {
+    padding: var(--cc-space-2);
+}
+
+.p-4 {
+    padding: var(--cc-space-4);
+}
+
+.p-8 {
+    padding: var(--cc-space-8);
+}
+
+.p-16 {
+    padding: var(--cc-space-16);
+}
+
+.pt-4 {
+    padding-top: var(--cc-space-4);
+}
+
+.pt-8 {
+    padding-top: var(--cc-space-8);
+}
+
+.pt-16 {
+    padding-top: var(--cc-space-16);
+}
+
+.pb-4 {
+    padding-bottom: var(--cc-space-4);
+}
+
+.pb-8 {
+    padding-bottom: var(--cc-space-8);
+}
+
+.pb-16 {
+    padding-bottom: var(--cc-space-16);
+}
+
+// ==========================================
+// BORDER UTILITIES
+// ==========================================
+
+.border {
+    border: 1px solid var(--cc-medium-gray);
+}
+
+.border-teal {
+    border: 1px solid var(--cc-primary-accent);
+}
+
+.border-top {
+    border-top: 1px solid var(--cc-medium-gray);
+}
+
+.border-bottom {
+    border-bottom: 1px solid var(--cc-medium-gray);
+}
+
+.border-none {
+    border: none;
+}
+
+.rounded-minimal {
+    border-radius: var(--cc-border-radius-minimal);
+}
+
+.rounded-small {
+    border-radius: var(--cc-border-radius-small);
+}
+
+.rounded-medium {
+    border-radius: var(--cc-border-radius-medium);
+}
+
+.rounded-large {
+    border-radius: var(--cc-border-radius-large);
+}
+
+.rounded-full {
+    border-radius: var(--cc-border-radius-circle);
+}
+
+// ==========================================
+// SHADOW UTILITIES
+// ==========================================
+
+.shadow-subtle {
+    box-shadow: var(--cc-shadow-subtle);
+}
+
+.shadow-medium {
+    box-shadow: var(--cc-shadow-medium);
+}
+
+.shadow-strong {
+    box-shadow: var(--cc-shadow-strong);
+}
+
+.shadow-accent {
+    box-shadow: var(--cc-shadow-accent);
+}
+
+.shadow-none {
+    box-shadow: none;
+}
+
+// ==========================================
+// DISPLAY UTILITIES
+// ==========================================
+
+.hidden {
+    display: none;
+}
+
+.block {
+    display: block;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.flex {
+    display: flex;
+}
+
+.inline-flex {
+    display: inline-flex;
+}
+
+.grid {
+    display: grid;
+}
+
+// ==========================================
+// POSITION UTILITIES
+// ==========================================
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.fixed {
+    position: fixed;
+}
+
+.sticky {
+    position: sticky;
+}
+
+// ==========================================
+// OVERFLOW UTILITIES
+// ==========================================
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.overflow-auto {
+    overflow: auto;
+}
+
+.overflow-scroll {
+    overflow: scroll;
+}
+
+// ==========================================
+// OPACITY UTILITIES
+// ==========================================
+
+.opacity-0 {
+    opacity: 0;
+}
+
+.opacity-10 {
+    opacity: 0.1;
+}
+
+.opacity-25 {
+    opacity: 0.25;
+}
+
+.opacity-50 {
+    opacity: 0.5;
+}
+
+.opacity-75 {
+    opacity: 0.75;
+}
+
+.opacity-100 {
+    opacity: 1;
+}
+
+// ==========================================
+// TEXT ALIGNMENT
+// ==========================================
+
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+// ==========================================
+// FONT WEIGHT
+// ==========================================
+
+.font-light {
+    font-weight: var(--cc-font-weight-light);
+}
+
+.font-normal {
+    font-weight: var(--cc-font-weight-normal);
+}
+
+.font-medium {
+    font-weight: var(--cc-font-weight-medium);
+}
+
+.font-bold {
+    font-weight: var(--cc-font-weight-bold);
+}
+
+// ==========================================
+// ACCESSIBILITY UTILITIES
+// ==========================================
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+// ==========================================
+// ANIMATION UTILITIES
+// ==========================================
+
+.transition-fast {
+    transition: all var(--cc-transition-fast) var(--cc-easing-standard);
+}
+
+.transition-normal {
+    transition: all var(--cc-transition-normal) var(--cc-easing-standard);
+}
+
+.transition-medium {
+    transition: all var(--cc-transition-medium) var(--cc-easing-smooth);
+}
+
+.transition-slow {
+    transition: all var(--cc-transition-slow) var(--cc-easing-smooth);
+}
+
+.hover-lift {
+    transition: transform var(--cc-transition-normal);
+
+    &:hover {
+        transform: translateY(-2px);
+    }
+}
+
+.hover-scale {
+    transition: transform var(--cc-transition-normal);
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+// ==========================================
+// Z-INDEX UTILITIES
+// ==========================================
+
+.z-base {
+    z-index: var(--cc-z-base);
+}
+
+.z-overlay {
+    z-index: var(--cc-z-overlay);
+}
+
+.z-dropdown {
+    z-index: var(--cc-z-dropdown);
+}
+
+.z-modal {
+    z-index: var(--cc-z-modal);
+}
+
+.z-tooltip {
+    z-index: var(--cc-z-tooltip);
+}

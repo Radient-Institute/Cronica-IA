@@ -1,0 +1,289 @@
+// ============================================
+// CONTROLLED CHAOS - HERO SECTIONS
+// ============================================
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    background: var(--cc-white);
+    position: relative;
+    padding: var(--cc-space-16) var(--cc-space-8);
+    overflow: hidden;
+}
+
+// ==========================================
+// HERO LAYOUT - Grid Based
+// ==========================================
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--cc-space-16);
+    max-width: var(--cc-container-max-width);
+    margin: 0 auto;
+    align-items: center;
+    position: relative;
+    z-index: var(--cc-z-base);
+}
+
+// ==========================================
+// HERO CONTENT (Clean, 70% left)
+// ==========================================
+
+.hero-content {
+    flex: 1;
+    max-width: 600px;
+    padding: var(--cc-space-16);
+}
+
+.hero-title {
+    font-family: var(--cc-font-heading);
+    font-size: var(--cc-font-size-h1);
+    font-weight: var(--cc-font-weight-normal);
+    color: var(--cc-black);
+    margin: 0 0 var(--cc-space-4) 0;
+    line-height: var(--cc-line-height-tight);
+    letter-spacing: var(--cc-letter-spacing-tight);
+}
+
+.hero-subtitle {
+    font-family: var(--cc-font-ui);
+    font-size: var(--cc-font-size-large);
+    font-weight: var(--cc-font-weight-light);
+    color: var(--cc-dark-gray);
+    line-height: var(--cc-line-height-normal);
+    margin-bottom: var(--cc-space-8);
+}
+
+.hero-cta {
+    margin-top: var(--cc-space-8);
+    display: flex;
+    gap: var(--cc-space-4);
+    flex-wrap: wrap;
+
+    a,
+    button {
+        flex: 0 0 auto; // prevent social buttons/CTAs from stretching full width
+    }
+
+    // Smooth icon hover effects
+    a,
+    button {
+
+        svg,
+        img,
+        .icon {
+            transition: all var(--cc-transition-medium) var(--cc-easing-smooth);
+        }
+
+        &:hover {
+
+            svg,
+            img,
+            .icon {
+                transform: translateX(4px);
+            }
+        }
+    }
+}
+
+.landing-social-row {
+    display: flex;
+    gap: var(--cc-space-3);
+    align-items: center;
+    flex-wrap: wrap;
+    margin: var(--cc-space-2) 0 var(--cc-space-4);
+}
+
+.landing-social {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.6rem;
+    height: 2.6rem;
+    flex: 0 0 auto;
+    border-radius: var(--cc-border-radius-small);
+    border: 1px solid var(--cc-medium-gray);
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--cc-black);
+    text-decoration: none;
+    transition: all var(--cc-transition-normal) var(--cc-easing-standard);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+
+    svg {
+        width: 1.2rem;
+        height: 1.2rem;
+        color: currentColor;
+    }
+
+    &:hover {
+        border-color: var(--cc-primary-accent);
+        color: var(--cc-primary-accent);
+        box-shadow: 0 0 14px var(--cc-accent-teal-30);
+        transform: translateY(-2px);
+    }
+}
+
+// ==========================================
+// HERO VISUAL (Contained collage element, 30% right)
+// ==========================================
+
+.hero-visual {
+    flex: 1;
+    position: relative;
+    height: 500px;
+    max-width: 500px;
+
+    // Contain the chaos with clip-path
+    clip-path: circle(50% at 50% 50%);
+    filter: saturate(0.7) contrast(1.1);
+    transition: all var(--cc-transition-slow) var(--cc-easing-smooth);
+
+    img,
+    video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.6;
+        transition: all var(--cc-transition-medium) var(--cc-easing-smooth);
+    }
+
+    &:hover {
+        filter: saturate(0.85) contrast(1.05);
+
+        img,
+        video {
+            opacity: 0.8;
+            transform: scale(1.05);
+        }
+    }
+}
+
+// ==========================================
+// BACKGROUND TEXTURE OVERLAY (Subtle, 3-5% opacity)
+// ==========================================
+
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 80% 20%,
+            var(--cc-accent-teal-15) 0%,
+            transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+// Alternative subtle pattern background
+.hero-pattern {
+    &::before {
+        background-image: url('data:image/svg+xml,<svg width="20" height="20" xmlns="http://www.w3.org/2000/svg"><rect width="20" height="20" fill="none"/><circle cx="10" cy="10" r="1" fill="rgba(43,155,158,0.1)"/></svg>');
+        opacity: 0.3;
+    }
+}
+
+// ==========================================
+// MINIMALIST HERO (No visual, centered)
+// ==========================================
+
+.hero-minimal {
+    text-align: center;
+    padding: var(--cc-space-32) var(--cc-space-8);
+
+    .hero-content {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .hero-cta {
+        justify-content: center;
+    }
+}
+
+// ==========================================
+// RESPONSIVE HERO
+// ==========================================
+
+@media screen and (max-width: 968px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: var(--cc-space-8);
+    }
+
+    .hero-visual {
+        height: 400px;
+        order: -1; // Move visual above content on mobile
+    }
+
+    .hero-content {
+        max-width: 100%;
+        padding: var(--cc-space-8);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero {
+        min-height: 60vh;
+        padding: var(--cc-space-8) var(--cc-space-4);
+    }
+
+    .hero-visual {
+        height: 300px;
+    }
+}
+
+// ==========================================
+// FEATURE SECTION (Similar to hero but for content)
+// ==========================================
+
+.feature-section {
+    padding: var(--cc-space-32) 0;
+    background: var(--cc-white);
+    position: relative;
+
+    .container {
+        max-width: var(--cc-container-max-width);
+        margin: 0 auto;
+        padding: 0 var(--cc-space-8);
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: var(--cc-space-16);
+        align-items: center;
+    }
+
+    // Subtle background texture
+    .texture-overlay {
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(circle at 80% 20%,
+                var(--cc-accent-teal-15) 0%,
+                transparent 50%);
+        pointer-events: none;
+    }
+
+    @media screen and (max-width: 968px) {
+        .container {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+// Content column (70% width, clean)
+.content-column {
+    h2 {
+        margin-top: 0;
+    }
+}
+
+// Visual column (30% width, subtle collage)
+.visual-column {
+    position: relative;
+
+    .collage-container {
+        opacity: 0.6;
+        filter: grayscale(30%);
+        mix-blend-mode: multiply;
+    }
+}

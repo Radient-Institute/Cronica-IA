@@ -1,0 +1,164 @@
+// ============================================
+// SKYLINE REVERIE - UTILITIES
+// ============================================
+
+.accent-line {
+    position: relative;
+    padding-inline-start: var(--sr-space-5);
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 3px;
+        background: linear-gradient(180deg, var(--sr-coral-primary), var(--sr-sky-primary));
+        box-shadow: 2px 2px 0 var(--sr-cream);
+    }
+}
+
+.tech-shadow {
+    box-shadow: var(--sr-shadow-offset);
+}
+
+.minimal-sparkle {
+    position: relative;
+    overflow: hidden;
+}
+
+.minimal-sparkle::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle, rgba(91, 180, 196, 0.18) 1px, transparent 1px);
+    background-size: 50px 50px;
+    opacity: 0.25;
+    pointer-events: none;
+    transition: opacity var(--sr-transition-normal);
+}
+
+.minimal-sparkle:hover::before {
+    animation: shimmer 3s ease-in-out;
+    opacity: 0.5;
+}
+
+.surface {
+    background: var(--sr-off-white);
+    border: var(--sr-border-strong);
+    padding: var(--sr-space-6);
+    box-shadow: var(--sr-shadow-offset);
+}
+
+.pill {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--sr-space-2);
+    padding: var(--sr-space-2) var(--sr-space-4);
+    background: rgba(91, 180, 196, 0.1);
+    border: 1px solid rgba(11, 27, 36, 0.1);
+    border-radius: 999px;
+    color: var(--sr-ink-muted);
+}
+
+// ============================================
+// TIMELINE / STEPS
+// ============================================
+.book-steps {
+    position: relative;
+    margin: var(--sr-space-12) 0;
+
+    >ol {
+        counter-reset: steps 0 !important;
+        list-style: none;
+        padding-inline-start: var(--sr-space-14) !important;
+        margin: 0 !important;
+        position: relative;
+    }
+
+    >ol::before {
+        content: '';
+        position: absolute;
+        left: calc(var(--sr-space-8));
+        top: var(--sr-space-6);
+        bottom: 0;
+        width: 2px;
+        background: linear-gradient(180deg, rgba(91, 180, 196, 0.6), rgba(232, 139, 139, 0.4));
+        opacity: 0.9;
+    }
+
+    >ol>li {
+        position: relative;
+        counter-increment: steps 1 !important; // avoid double increments from base styles
+        padding: var(--sr-space-3) var(--sr-space-2) var(--sr-space-3) var(--sr-space-12) !important;
+        margin: 0 !important;
+        border-inline-start: none !important;
+        color: var(--sr-ink-muted);
+        background: transparent;
+
+        &:last-child {
+            padding-bottom: 0;
+        }
+
+        &::before {
+            content: counter(steps);
+            counter-increment: steps 0 !important; // prevent nested increment
+            position: absolute;
+            left: calc(-1 * var(--sr-space-10));
+            top: var(--sr-space-2);
+            width: 40px;
+            height: 40px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--sr-font-heading);
+            letter-spacing: 0.04em;
+            font-size: 1rem;
+            background: linear-gradient(135deg, var(--sr-coral-primary), var(--sr-sky-primary)) !important;
+            color: #fff !important;
+            border-radius: 50%;
+            box-shadow: 2px 2px 0 var(--sr-cream), 0 0 0 6px rgba(255, 248, 240, 0.85);
+            outline: none !important;
+            border: 1px solid rgba(11, 27, 36, 0.12) !important;
+            background-clip: padding-box;
+            z-index: 1;
+        }
+
+        &:hover {
+            border-inline-start-color: rgba(91, 180, 196, 0.35);
+            color: var(--sr-ink);
+        }
+
+        h3,
+        h4,
+        h5 {
+            margin-top: 0;
+            margin-bottom: var(--sr-space-3);
+            color: var(--sr-ink);
+            letter-spacing: 0.02em;
+        }
+
+        p {
+            margin: 0;
+            color: var(--sr-ink-muted);
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        >ol {
+            padding-inline-start: var(--sr-space-6) !important;
+        }
+
+        >ol>li {
+            padding: var(--sr-space-3) var(--sr-space-3) var(--sr-space-8) var(--sr-space-10) !important;
+
+            &::before {
+                width: 34px;
+                height: 34px;
+                left: calc(-1 * var(--sr-space-8));
+                top: var(--sr-space-1);
+                box-shadow: 2px 2px 0 var(--sr-cream), 0 0 0 4px rgba(255, 248, 240, 0.9);
+            }
+        }
+    }
+}

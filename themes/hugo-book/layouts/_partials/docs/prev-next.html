@@ -1,0 +1,31 @@
+{{ $bookSection := default "docs" .Site.Params.BookSection  }}
+{{ if eq $bookSection "*" }}
+  {{ $bookSection = "/" }}{{/* Backward compatibility */}}
+{{ end }}
+
+{{ with .Site.GetPage $bookSection }}
+  {{ $pages := partialCached "docs/prev-next-cache" .Pages }}
+  {{ $prev := $pages.Next $ }}
+  {{ $next := $pages.Prev $ }}
+
+  {{- if or $prev $next }}
+  <div class="flex flex-wrap justify-between">
+    <span>
+    {{ with $prev }}
+      <a href="{{ .RelPermalink }}" class="flex align-center" aria-label="{{ partial "docs/text/i18n" "Backward" }}">
+        {{ partial "docs/icon" "backward" }}
+        <span>{{ partial "docs/title" . }}</span>
+      </a>
+    {{ end }}
+    </span>
+    <span>
+    {{ with $next }}
+      <a href="{{ .RelPermalink }}" class="flex align-center" aria-label="{{ partial "docs/text/i18n" "Forward" }}">
+        <span>{{ partial "docs/title" . }}</span>
+        {{ partial "docs/icon" "forward" }}
+      </a>
+    {{ end }}
+    </span>
+  </div>
+  {{ end -}}
+{{ end }}

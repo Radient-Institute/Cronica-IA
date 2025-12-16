@@ -1,0 +1,18 @@
+<div class="flex flex-wrap justify-between">
+  <div>
+  {{ with .NextInSection }}
+    <a href="{{ .RelPermalink }}" class="flex align-center" aria-label="{{ partial "docs/text/i18n" "Backward" }}">
+      {{ partial "docs/icon" "backward" }}
+      <span>{{ partial "docs/title" . }}</span>
+    </a>
+  {{ end }}
+  </div>
+  <div>
+  {{ with .PrevInSection }}
+    <a href="{{ .RelPermalink }}" class="flex align-center" aria-label="{{ partial "docs/text/i18n" "Forward" }}">
+      <span>{{ partial "docs/title" . }}</span>
+      {{ partial "docs/icon" "forward" }}
+    </a>
+  {{ end }}
+  </div>
+</div>

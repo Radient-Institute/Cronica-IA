@@ -1,0 +1,87 @@
+// ============================================
+// SKYLINE REVERIE THEME
+// ============================================
+
+// ============================================
+// GOOGLE FONTS
+// ============================================
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@400;500;700&family=Space+Mono:wght@400;700&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,300..700,0..1,-50..200&display=swap');
+
+// ============================================
+// DESIGN SYSTEM
+// ============================================
+@import 'variables';
+@import 'typography';
+
+// Components
+@import 'navigation';
+@import 'hero';
+@import 'cards';
+@import 'buttons';
+
+// Layouts & Utilities
+@import 'layouts';
+@import 'utils';
+
+// ============================================
+// GLOBAL STYLES
+// ============================================
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(180deg, rgba(255, 248, 240, 0.94), rgba(245, 230, 211, 0.94));
+}
+
+.book-icon {
+    color: var(--sr-ink) !important;
+    font-variation-settings: 'FILL' 0, 'wght' 520, 'GRAD' 0, 'opsz' 24;
+    text-shadow: 2px 2px 0 var(--sr-cream);
+}
+
+::selection {
+    background: rgba(232, 139, 139, 0.4);
+    color: #fff;
+}
+
+::-moz-selection {
+    background: rgba(232, 139, 139, 0.4);
+    color: #fff;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 248, 240, 0.92);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(11, 27, 36, 0.2);
+    border-radius: 999px;
+
+    &:hover {
+        background: rgba(232, 139, 139, 0.5);
+    }
+}
+
+:focus-visible {
+    outline: 2px solid rgba(91, 180, 196, 0.6);
+    outline-offset: 2px;
+}
+
+img,
+video,
+svg {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}

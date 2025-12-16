@@ -1,0 +1,16 @@
+<!-- <div style="background: red; color: white; padding: 10px;">DEBUG BANNER: Checking image...</div>
+{{ if .Params.image }}
+<div style="background: blue; color: white; padding: 10px;">DEBUG: Image param found: {{ .Params.image }}</div>
+{{ $image := resources.Get .Params.image }}
+{{ if $image }}
+<div style="background: green; color: white; padding: 10px;">DEBUG: Resource found</div>
+<img src="{{ $image.RelPermalink }}" alt="{{ .Title }}" class="book-banner-image"
+    style="width: 100%; height: auto; object-fit: cover; max-height: 400px; margin-bottom: 1rem; border-radius: 8px;">
+{{ else }}
+<div style="background: orange; color: white; padding: 10px;">DEBUG: Resource NOT found, using relURL</div>
+<img src="{{ .Params.image | relURL }}" alt="{{ .Title }}" class="book-banner-image"
+    style="width: 100%; height: auto; object-fit: cover; max-height: 400px; margin-bottom: 1rem; border-radius: 8px;">
+{{ end }}
+{{ else }}
+<div style="background: yellow; color: black; padding: 10px;">DEBUG: No image param</div>
+{{ end }} -->

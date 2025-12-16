@@ -1,0 +1,63 @@
+// ============================================
+// SKYLINE REVERIE - DESIGN TOKENS
+// ============================================
+
+:root {
+    // Palette
+    --sr-sky-primary: #5bb4c4;
+    --sr-sky-light: #7ac5d3;
+    --sr-sky-pale: #a8d8e0;
+    --sr-coral-primary: #e88b8b;
+    --sr-coral-soft: #f5b5b5;
+    --sr-salmon: #ff9b9b;
+    --sr-pink-accent: #ffb3c1;
+    --sr-cream: #f5e6d3;
+    --sr-beige: #e5d5c3;
+    --sr-off-white: #fff8f0;
+    --sr-ink: #0b1b24;
+    --sr-ink-soft: #132733;
+    --sr-ink-muted: #335160;
+    --sr-shadow-color: rgba(91, 180, 196, 0.35);
+    --sr-overlay: rgba(245, 230, 211, 0.78);
+
+    // Typography
+    --sr-font-body: 'Space Grotesk', 'DM Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --sr-font-heading: 'DM Sans', 'Space Grotesk', 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --sr-font-mono: 'Space Mono', 'Courier Prime', 'SFMono-Regular', Menlo, Consolas, monospace;
+    --sr-letter-spacing-wide: 0.08em;
+
+    // Spacing
+    --sr-space-1: 0.2rem;
+    --sr-space-2: 0.4rem;
+    --sr-space-3: 0.6rem;
+    --sr-space-4: 0.8rem;
+    --sr-space-5: 1rem;
+    --sr-space-6: 1.25rem;
+    --sr-space-8: 1.75rem;
+    --sr-space-10: 2.25rem;
+    --sr-space-12: 3rem;
+    --sr-space-14: 3.5rem;
+    --sr-space-16: 4.25rem;
+    --sr-space-20: 5.5rem;
+
+    // Layout
+    --sr-container-max: 1200px;
+    --sr-radius: 3px;
+    --sr-border-strong: 2px solid var(--sr-sky-primary);
+    --sr-border-soft: 1px solid rgba(11, 27, 36, 0.08);
+    --sr-border-dashed: 1px dashed rgba(11, 27, 36, 0.2);
+
+    // Effects & Motion
+    --sr-shadow-offset: 4px 4px 0 var(--sr-coral-primary), 8px 8px 0 var(--sr-cream);
+    --sr-shadow-soft: 0 16px 35px rgba(19, 39, 51, 0.18);
+    --sr-shadow-ambient: 0 0 0 1px rgba(11, 27, 36, 0.06), 0 14px 40px rgba(91, 180, 196, 0.18);
+    --sr-transition-fast: 140ms ease-out;
+    --sr-transition-normal: 260ms cubic-bezier(0.4, 0, 0.2, 1);
+    --sr-transition-slow: 520ms cubic-bezier(0.25, 0.1, 0.25, 1);
+
+    // Z-index
+    --sr-z-base: 1;
+    --sr-z-nav: 140;
+    --sr-z-overlay: 160;
+    --sr-z-popout: 170;
+}

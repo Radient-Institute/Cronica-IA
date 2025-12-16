@@ -1,0 +1,92 @@
+{{ "<!--" | safeHTML }}
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+{{ "-->" | safeHTML }}
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="{{ or .Description .Summary | plainify | htmlUnescape }}">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark">
+
+{{- with .Page.Params.BookHref -}}
+  <meta http-equiv="Refresh" content="0; url='{{ . }}'" />
+{{- end -}}
+
+{{ partial "opengraph.html" . }}
+{{ partial "schema.html" . }}
+
+<title>{{ partial "docs/html-head-title" . }}</title>
+{{ partial "docs/html-head-favicon" . }}
+
+{{- $manifest := resources.Get "manifest.json" | resources.ExecuteAsTemplate "manifest.json" . }}
+<link rel="manifest" href="{{ $manifest.RelPermalink }}">
+<link rel="canonical" href="{{ .Permalink }}">
+
+{{- range .Translations }}
+  <link rel="alternate" hreflang="{{ default .Site.LanguageCode .Language.Lang }}" href="{{ .Permalink }}" title="{{ partial "docs/title" . }}">
+{{- end -}}
+
+<!-- Theme stylesheet -->
+{{- $bookStyles := resources.Get "book.scss" | resources.ExecuteAsTemplate "book.scss" . | css.Sass | resources.Minify | resources.Fingerprint }}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,300..700,0..1,-50..200&display=swap">
+<link rel="stylesheet" href="{{ partial "docs/links/resource-precache" $bookStyles }}" {{ template "integrity" $bookStyles }}>
+
+<!-- Custom Style Switcher Logic - Synchronous to prevent FOUC -->
+{{- $style1 := resources.Get "style_1/theme.scss" | css.Sass | resources.Minify | resources.Fingerprint }}
+{{- $style2 := resources.Get "style_2/theme.scss" | css.Sass | resources.Minify | resources.Fingerprint }}
+{{- $style3 := resources.Get "style_3/theme.scss" | css.Sass | resources.Minify | resources.Fingerprint }}
+
+<script>
+  (function() {
+    var stylePaths = {
+      'style_1': '{{ $style1.RelPermalink }}',
+      'style_2': '{{ $style2.RelPermalink }}',
+      'style_3': '{{ $style3.RelPermalink }}'
+    };
+    var styles = ['style_1', 'style_2', 'style_3'];
+    var selectedStyle = localStorage.getItem('site-style');
+
+    if (!selectedStyle || styles.indexOf(selectedStyle) === -1) {
+      var randomIndex = Math.floor(Math.random() * styles.length);
+      selectedStyle = styles[randomIndex];
+      localStorage.setItem('site-style', selectedStyle);
+    }
+
+    document.write('<link rel="stylesheet" href="' + stylePaths[selectedStyle] + '" id="active-theme-link">');
+  })();
+</script>
+
+<noscript>
+  <link rel="stylesheet" href="{{ $style1.RelPermalink }}">
+</noscript>
+
+<!-- Search -->
+{{- if default true .Site.Params.BookSearch -}}
+  {{- $searchJSFile := printf "%s.search.js" .Language.Lang }}
+  {{- $searchJS := resources.Get "search.js" | resources.ExecuteAsTemplate $searchJSFile . | resources.Minify | resources.Fingerprint }}
+  <script defer src="{{ "fuse.min.js" | relURL }}"></script>
+  <script defer src="{{ partial "docs/links/resource-precache" $searchJS }}" {{ template "integrity" $searchJS }}></script>
+{{ end -}}
+
+<!-- Service Worker -->
+{{- if .Site.Params.BookServiceWorker -}}
+  {{- $swJS := resources.Get "sw-register.js" | resources.ExecuteAsTemplate "sw.js" . | resources.Minify | resources.Fingerprint }}
+  <script defer src="{{ $swJS.RelPermalink }}" {{ template "integrity" $swJS }}></script>
+{{ end -}}
+
+{{ partial "google_analytics.html" . }}
+
+<!-- RSS -->
+{{- with .OutputFormats.Get "rss" -}}
+  {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+{{ end -}}
+
+{{- define "integrity" -}}
+  {{- if (urls.Parse .Permalink).Host -}}
+    integrity="{{ .Data.Integrity }}" crossorigin="anonymous"
+  {{- end -}}
+{{- end -}}
