@@ -35,7 +35,7 @@ Un proyecto colaborativo creado y mantenido por la comunidad de Radient Institut
 
 Una crónica viva de la era post-ChatGPT: cómo la inteligencia artificial salió del laboratorio, entró en la cultura y empezó a reconfigurar la industria, la política y el imaginario colectivo.
 
-**Historia narrada con contexto técnico, mirada cultural y perspectiva curada..**
+**Historia narrada con contexto técnico, mirada cultural y perspectiva curada.**
 
 
 {{< button href="/docs/content/" >}}Comenzar a Leer{{< /button >}}
