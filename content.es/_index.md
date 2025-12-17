@@ -43,10 +43,10 @@ Una crónica viva de la era post-ChatGPT: cómo la inteligencia artificial sali�
 </div>
 
 {{% columns %}}
-- ## ¿Cómo nace este proyecto?
+- ## ¿Cómo nace este proyecto? {anchor=false}
   La [Bitácora Rumbo a AGI](https://www.youtube.com/watch?v=_9nXN-PIAms&list=PLf4kjSBsgWWj7z9AyKlSOozRGksFyiYAf&index=94) es un noticiero semanal que cubre eventos y desarrollos en el campo de la IA. Pero la velocidad del ciclo de noticias deja poco espacio para el contexto, las conexiones y la perspectiva histórica. Esta crónica nace para llenar ese vacío: ordenar el ruido, conectar los hitos y contar (con tiempo y criterio) qué pasó realmente y por qué importó.
 
-- ## Filosofía
+- ## Filosofía {anchor=false}
   El texto adopta una prosa fluida, informativa y accesible, con fuerte enfoque narrativo. No es una enciclopedia ni un registro neutral: es una crónica curada.
   Cada capítulo puede leerse de forma independiente, pero forma parte de un relato mayor, anclado en una línea temporal clara (mes a mes, año a año).
   Si alguien hubiese quedado en coma en enero de 2023, despertara hoy y quisiera entender qué pasó con la IA en su ausencia, este libro es una muy buena forma de ponerse al día.
@@ -56,17 +56,17 @@ Una crónica viva de la era post-ChatGPT: cómo la inteligencia artificial sali�
 
 {{% columns %}}
 - {{< card >}}
-  ## Alcance temporal
+  ## Alcance temporal {anchor=false}
   Esta crónica cubre la era post-ChatGPT: desde diciembre de 2022 hasta la actualidad. La “IA moderna” comienza cuando la inteligencia artificial deja de ser tecnología de nicho y pasa a convertirse en fenómeno cultural, industrial y político.
   {{< /card >}}
 
 - {{< card >}}
-  ## Documento vivo
+  ## Documento vivo {anchor=false}
   Este es un texto en evolución constante. Se agregan capítulos, se incorporan eventos recientes y se corrigen interpretaciones a medida que el panorama se aclara.
   {{< /card >}}
 
 - {{< card >}}
-  ## Sugerir edición
+  ## Sugerir edición {anchor=false}
   Si detectas errores, tienes información adicional o quieres proponer mejoras, puedes abrir un issue en el repositorio de [GitHub](https://github.com/RadientAI/Cronica-IA) del proyecto.
   {{< /card >}}
 {{% /columns %}}

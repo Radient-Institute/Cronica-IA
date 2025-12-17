@@ -41,10 +41,10 @@ A living chronicle of the post-ChatGPT era: how artificial intelligence left the
 </div>
 
 {{% columns %}}
-- ## How did this project begin?
+- ## How did this project begin? {anchor=false}
   The [Road to AGI Logbook](https://www.youtube.com/watch?v=_9nXN-PIAms&list=PLf4kjSBsgWWj7z9AyKlSOozRGksFyiYAf&index=94) is a weekly news show that covers events and developments in the field of AI. But the speed of the news cycle leaves little room for context, connections, and historical perspective. This chronicle was born to fill that gap: to organize the noise, connect the milestones, and tell (with time and judgment) what really happened—and why it mattered.
 
-- ## Philosophy
+- ## Philosophy {anchor=false}
   The text adopts a fluid, informative, and accessible prose, with a strong narrative focus. It is neither an encyclopedia nor a neutral record: it is a curated chronicle.  
   Each chapter can be read independently, yet it is part of a larger story, anchored to a clear timeline (month by month, year by year).  
   If someone had fallen into a coma in January 2023, woke up today, and wanted to understand what happened to AI in their absence, this book is a very good way to catch up.
@@ -52,17 +52,17 @@ A living chronicle of the post-ChatGPT era: how artificial intelligence left the
 
 {{% columns %}}
 - {{< card >}}
-  ## Temporal scope
+  ## Temporal scope {anchor=false}
   This chronicle covers the post-ChatGPT era: from December 2022 to the present. “Modern AI” begins when artificial intelligence stops being niche technology and becomes a cultural, industrial, and political phenomenon.
   {{< /card >}}
 
 - {{< card >}}
-  ## Living document
+  ## Living document {anchor=false}
   This is a constantly evolving text. New chapters are added, recent events are incorporated, and interpretations are revised as the picture becomes clearer.
   {{< /card >}}
 
 - {{< card >}}
-  ## Suggest an edit
+  ## Suggest an edit {anchor=false}
   If you spot errors, have additional information, or want to propose improvements, you can open an issue in the project’s [GitHub](https://github.com/RadientAI/Cronica-IA) repository.
   {{< /card >}}
 {{% /columns %}}
