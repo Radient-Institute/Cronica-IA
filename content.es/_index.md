@@ -67,6 +67,6 @@ Una cr처nica viva de la era post-ChatGPT: c처mo la inteligencia artificial sali�
 
 - {{< card >}}
   ## Sugerir edici처n {anchor=false}
-  Si detectas errores, tienes informaci처n adicional o quieres proponer mejoras, puedes abrir un issue en el repositorio de [GitHub](https://github.com/RadientAI/Cronica-IA) del proyecto.
+  Si detectas errores, tienes informaci처n adicional o quieres proponer mejoras, puedes abrir un issue en el repositorio de [GitHub](https://github.com/Radient-Institute/Cronica-IA) del proyecto.
   {{< /card >}}
 {{% /columns %}}

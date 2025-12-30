@@ -63,6 +63,6 @@ A living chronicle of the post-ChatGPT era: how artificial intelligence left the
 
 - {{< card >}}
   ## Suggest an edit {anchor=false}
-  If you spot errors, have additional information, or want to propose improvements, you can open an issue in the project’s [GitHub](https://github.com/RadientAI/Cronica-IA) repository.
+  If you spot errors, have additional information, or want to propose improvements, you can open an issue in the project’s [GitHub](https://github.com/Radient-Institute/Cronica-IA) repository.
   {{< /card >}}
 {{% /columns %}}
