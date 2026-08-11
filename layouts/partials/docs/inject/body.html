@@ -1,0 +1,11 @@
+<script>
+    (function () {
+        var origin = window.location.origin;
+        document.querySelectorAll('a[href^="http"]').forEach(function (link) {
+            if (new URL(link.href).origin !== origin && !link.target) {
+                link.target = '_blank';
+                link.rel = 'noopener noreferrer';
+            }
+        });
+    })();
+</script>
