@@ -17,7 +17,7 @@ The current chapters are:
 2. ### [The Capture of GPT-4]({{< relref "02_the_capture_of_gpt_4.md" >}})
    The desperate race to catch up with OpenAI’s technology begins on all fronts.
 
-3. ### [The Mission Bay Incident]({{< relref "03_the_mission_bay_incident.md" >}})
+3. ### [The Florida Street Incident]({{< relref "03_the_florida_street_incident.md" >}})
    The firing and swift reinstatement of Sam Altman, along with the consequences that followed.
 
 4. ### [The Coral]({{< relref "04_the_coral.md" >}})
