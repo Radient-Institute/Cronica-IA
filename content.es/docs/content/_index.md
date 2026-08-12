@@ -17,7 +17,7 @@ Los capítulos actuales son:
 2. ### [La Captura De GPT-4]({{< relref "02_la_captura_de_gpt_4.md" >}})
     Inicia la carrera desesperada por alcanzar la tecnología de OpenAI desde todos los frentes.
 
-3. ### [El Incidente De Mission Bay]({{< relref "03_el_incidente_de_mission_bay.md" >}})
+3. ### [El Incidente De Florida Street]({{< relref "03_el_incidente_de_florida_street.md" >}})
     El despido y pronta reintegración de Sam Altman, junto con las consecuencias que esto trajo.
 
 4. ### [El Coral]({{< relref "04_el_coral.md" >}})
