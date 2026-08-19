@@ -9,9 +9,9 @@ image: _din_style/banner_images/05_tt.webp
 
 ## The Technique Required for Scale
 
-Sometime in June 2023, George Hotz—founder of Comma.ai and Tinycorp—leaked information about GPT-4’s architecture during a podcast interview. He claimed that this model was not a “normal” GPT, but rather a *Mixture of Experts* (MoE), with 8 experts of 220B parameters each, totaling 1.8T parameters.
+Sometime in June 2023, George Hotz—founder of Comma.ai and Tinycorp—leaked information about GPT-4’s architecture during a podcast interview. He claimed that this model was not a “normal” GPT, but rather a *Mixture of Experts* (MoE), with 8 experts of 220B parameters each, totaling 1.8T parameters.[^1]
 
-The *Mixture-of-Experts* (MoE) approach was not a new technique invented by OpenAI. It essentially allows a model’s capacity to be increased while keeping (or even reducing, at comparable quality) the compute per *token*.
+The *Mixture-of-Experts* (MoE) approach was not a new technique invented by OpenAI. It essentially allows a model’s capacity to be increased while keeping (or even reducing, at comparable quality) the compute per *token*.[^2][^3]
 
 {{% details title="How MoE Works" open=false %}}
 It achieves this by replacing the Transformer’s *feed-forward* (FFN) layer—the one that comes after the attention mechanism—with multiple FFN “experts” and a *router* that, for each *token*, selects only a subset (top-k) and then combines their outputs.  
@@ -22,19 +22,47 @@ Building and serving these models is more complex, but it’s worth it: you get 
 
 ## GPT-3.5-Turbo Captured
 
-After this leak, it would take several months before companies managed to train and serve MoEs at scale. The first to succeed was the French *startup* **Mistral**, which enjoyed significant popularity at the time. It was composed primarily of former Meta employees who had worked on LLaMA, along with members from other labs. They announced themselves in April 2023 as “the European answer” to U.S. AI development.
+After this leak, it would take several months before companies managed to train and serve MoEs at scale. The first to succeed was the French *startup* **Mistral**, which enjoyed significant popularity at the time. It was composed primarily of former Meta employees who had worked on LLaMA, along with members from other labs. They announced themselves in April 2023 as “the European answer” to U.S. AI development.[^4]
 
-Our French friends gave us a major reason to celebrate with the release of **Mixtral 8×7B** in December. For the first time, there was broad consensus that we finally had a model superior to GPT-3.5-Turbo. On top of that, it was *open source* and—while not exactly small by the standards of the time—it was still within reach for many to run locally.
+Our French friends gave us a major reason to celebrate with the release of **Mixtral 8×7B** in December.[^5] For the first time, there was broad consensus that we finally had a model superior to GPT-3.5-Turbo.[^6] On top of that, it was *open source* and—while not exactly small by the standards of the time—it was still within reach for many to run locally.
 
 ## GPT-4-Turbo Captured
 
 As 2023 came to a close, more than a year after ChatGPT’s release, OpenAI still sat at the top, and GPT-4 remained untouchable.
 
-In February 2024, a lab called the **Allen Institute**, founded by former Google Brain employees, made an unprecedented proposal that deserves an honorable mention. They introduced **Olmo**, the only series of models to date (as of 2025) that is fully *open source* and reproducible, complete with a detailed *paper*, weights, training *scripts*, and public *datasets* covering every phase of LLM creation (pre- and *post-training*).  
-They did not match GPT-4-Turbo—a smaller, more polished, and cheaper version of GPT-4—on any metric, but their transparency and commitment to open science were remarkable.
+In February 2024, a lab called the **Allen Institute**, founded by Paul Allen and initially led by Oren Etzioni,[^7] made an unprecedented proposal that deserves an honorable mention. They introduced **Olmo**,[^8] the only series of models to date (as of 2025) that is fully *open source* and reproducible, complete with a detailed *paper*, weights, training *scripts*, and public *datasets* covering every phase of LLM creation (pre- and *post-training*).[^9]  
+They did not match GPT-4-Turbo—a smaller, more polished, and cheaper version of GPT-4—on any metric,[^10] but their transparency and commitment to open science were remarkable.
 
-The lab that would achieve this feat just one month later, in March, was **Anthropic**. They released the **Claude 3** model family in three sizes (*Haiku*, *Sonnet*, and *Opus*), with *Haiku* being the smallest and *Opus* the largest.
+The lab that would achieve this feat just one month later, in March, was **Anthropic**. They released the **Claude 3** model family in three sizes (*Haiku*, *Sonnet*, and *Opus*), with *Haiku* being the smallest and *Opus* the largest.[^11]
 
-As for whether *Opus 3* was a better model than the GPT-4-Turbo of that time—it was debatable. But that’s precisely the point: **it was debatable**. OpenAI’s supremacy was no longer unquestionable.
+As for whether *Opus 3* was a better model than the GPT-4-Turbo of that time—it was debatable.[^12] But that’s precisely the point: **it was debatable**. OpenAI’s supremacy was no longer unquestionable.
 
-And as clear evidence of Anthropic’s model capabilities, many people canceled their ChatGPT subscriptions and switched to Claude, which also featured a highly polished UI with a new function—so useful that every other competitor eventually copied it: **artifacts**, a side panel next to the chat that renders the code generated by the model, offering a glimpse into the company’s future focus (code).
+And as clear evidence of Anthropic’s model capabilities, many people canceled their ChatGPT subscriptions and switched to Claude, which also featured a highly polished UI with a new function—so useful that every other competitor eventually copied it: **artifacts**, a side panel next to the chat that renders the code generated by the model, offering a glimpse into the company’s future focus (code).[^13]
+
+## References
+
+[^1]: Rickard, Matt. ["Mixture of Experts: Is GPT-4 Just Eight Smaller Models?"](https://blog.matt-rickard.com/p/mixture-of-experts-is-gpt-4-just). June 21, 2023.
+
+[^2]: Shazeer, Noam et al. ["Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer"](https://arxiv.org/abs/1701.06538). January 23, 2017.
+
+[^3]: Fedus, William; Zoph, Barret; Shazeer, Noam. ["Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity"](https://www.jmlr.org/papers/v23/21-0998.html). *Journal of Machine Learning Research*, 2022.
+
+[^4]: Financial Times. ["Four-week-old AI start-up raises record €105mn in European push"](https://www.ft.com/content/cf939ea4-d96c-4908-896a-48a74381f251). June 13, 2023.
+
+[^5]: Mistral AI. ["Mixtral of Experts"](https://mistral.ai/news/mixtral-of-experts/). December 11, 2023.
+
+[^6]: Jiang, Albert Q. et al. ["Mixtral of Experts"](https://arxiv.org/abs/2401.04088). January 8, 2024.
+
+[^7]: Allen Institute for AI. ["Oren Etzioni"](https://allenai.org/team/orene). Etzioni was the founding CEO of Ai2, the institute created by Paul Allen in 2014.
+
+[^8]: Allen Institute for AI. ["OLMo: Open Language Model"](https://allenai.org/blog/olmo-open-language-model-87ccfc95f580). February 1, 2024.
+
+[^9]: Groeneveld, Dirk et al. ["OLMo: Accelerating the Science of Language Models"](https://arxiv.org/abs/2402.00838). February 1, 2024.
+
+[^10]: OpenAI. ["New models and developer products announced at DevDay"](https://openai.com/index/new-models-and-developer-products-announced-at-devday/). November 6, 2023.
+
+[^11]: Anthropic. ["Introducing the next generation of Claude"](https://www.anthropic.com/news/claude-3-family). March 4, 2024.
+
+[^12]: Reuters. ["Anthropic releases more powerful Claude 3 AI as tech race continues"](https://www.reuters.com/technology/anthropic-releases-more-powerful-claude-3-ai-tech-race-continues-2024-03-04/). March 4, 2024.
+
+[^13]: Anthropic. ["Introducing Claude 3.5 Sonnet"](https://www.anthropic.com/news/claude-3-5-sonnet). June 20, 2024.
