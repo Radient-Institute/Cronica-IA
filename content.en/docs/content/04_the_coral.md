@@ -40,7 +40,7 @@ It is also worth mentioning the arrival of *Consistency Models* (March 2023) and
 
 ## Commercial Platforms
 
-MidJourney maintained its leadership, but the market was rapidly diversifying. Adobe, leveraging its enterprise muscle and massive user base, launched Firefly in May 2023, integrating it directly into Photoshop and other tools within its Creative Cloud ecosystem. Leonardo AI emerged as a favorite among content creators. Ideogram arrived in September with a differentiated promise: finally, readable text in generated images. And OpenAI—having started it all back in 2021 with DALL·E—doubled down with DALL·E 3, integrated directly into ChatGPT in September at no additional cost, further democratizing access.
+MidJourney maintained its leadership, but the market was rapidly diversifying. Adobe, leveraging its enterprise muscle and massive user base, launched Firefly in March 2023, later integrating it directly into Photoshop and other tools within its Creative Cloud ecosystem. Leonardo AI emerged as a favorite among content creators. Ideogram arrived in August with a differentiated promise: finally, readable text in generated images. And OpenAI—having started it all back in 2021 with DALL·E—doubled down with DALL·E 3, integrated directly into ChatGPT in September at no additional cost, further democratizing access.
 
 Each platform sought its own niche, whether through aesthetics, integration, variety, or other differentiators.
 
@@ -49,7 +49,7 @@ Each platform sought its own niche, whether through aesthetics, integration, var
 The community was not left behind, having built a vibrant ecosystem around Stable Diffusion. While SD 1.5 remained the reliable workhorse and SD 2.x received mixed reviews due to inconsistent performance, a new generation of models began to emerge.
 
 {{% details title="Relevant foundational image models" open=false %}}
-**DeepFloyd IF** (May 2023) was among the first models capable of generating readable text. **Stable Diffusion XL** (July 2023) finally fulfilled the promise of a superior SD version, with better composition and more refined details. **PixArt-Alpha** and **Würstchen** explored alternative architectures. **SDXL Turbo** demonstrated that speed was achievable. **Stable Cascade** (February 2024) and **Stable Diffusion 3** (February 2024) continued pushing the boundaries. **Playground 2.5** (March 2024) shifted the focus toward graphic design rather than photorealism.
+**DeepFloyd IF** (April 2023) was among the first models capable of generating readable text. **Stable Diffusion XL** (July 2023) finally fulfilled the promise of a superior SD version, with better composition and more refined details. **PixArt-Alpha** and **Würstchen** explored alternative architectures. **SDXL Turbo** demonstrated that speed was achievable. **Stable Cascade** (February 2024) and **Stable Diffusion 3** (February 2024) continued pushing the boundaries. **Playground 2.5** (March 2024) shifted the focus toward graphic design rather than photorealism.
 {{% /details %}}
 
 But the real magic of OSS wasn’t just in the base models—it was in what the community built on top of them.
@@ -77,7 +77,7 @@ The story of Stability AI is a case study in the challenges of monetizing *open 
 
 ### Cracks Begin to Show
 
-In early 2024, rumors began to circulate: Stability AI, despite its massive popularity and its role as the engine of the *open source* image-generation ecosystem, was facing serious financial trouble. The company that had given the world Stable Diffusion under the Apache 2.0 license, that had generously funded compute for *open source* organizations like EleutherAI, Carper AI, and Harmony AI, and that had earned the community’s love and respect—had failed to find a sustainable business model.
+In early 2024, rumors began to circulate: Stability AI, despite its massive popularity and its role as the engine of the *open source* image-generation ecosystem, was facing serious financial trouble. The company that had given the world Stable Diffusion under a permissive commercial license, that had generously funded compute for *open source* organizations like EleutherAI, Carper AI, and Harmony AI, and that had earned the community’s love and respect—had failed to find a sustainable business model.
 
 The *startup’s* idea was that the fame and recognition gained from its models would translate into lucrative contracts with governments and corporations needing customized models trained on internal data. Those contracts never arrived—or at least not at the scale required to cover expenses.
 
@@ -99,4 +99,14 @@ But the story has a poetic twist. Robin Rombach, the lead researcher behind Stab
 
 In August 2024 came their first release: **Flux**, an image generation model that proved the original team hadn’t lost its touch. They launched three versions: **Flux-Schnell** (*open source*, free commercial license), **Flux Dev** (*open source*, paid commercial license), and **Flux Pro** (accessible only via API or through *partners* such as Fal, Freepik, Krea, Leonardo, and even X.AI temporarily).
 
-The reception was enthusiastic. Flux quickly replaced Stable Diffusion as the de facto standard of the *open source* ecosystem. With incremental updates reaching Flux 1.1, the model maintained its leadership at least through mid-2025.
+The reception was enthusiastic. Flux quickly replaced Stable Diffusion as the de facto standard of the *open source* ecosystem. Subsequently, incremental updates were released, reaching Flux 1.1[^33] and Flux 2[^34]. The model maintained its leadership in an increasingly contested landscape of Chinese alternatives (Qwen-Image[^35] and Z-Image[^36]), at least throughout the rest of 2025.
+
+## References
+
+[^33]: Black Forest Labs. ["Announcing FLUX1.1 [pro] and the BFL API"](https://bfl.ai/blog/24-10-02-flux). October 2, 2024.
+
+[^34]: Black Forest Labs. ["FLUX.2: Frontier Visual Intelligence"](https://bfl.ai/blog/flux-2). November 25, 2025; Black Forest Labs. ["FLUX.2 [dev] is now open source"](https://github.com/black-forest-labs/flux2). November 25, 2025.
+
+[^35]: Qwen Team. ["Qwen-Image: Crafting with Native Text Rendering"](https://qwenlm.github.io/blog/qwen-image/). August 4, 2025; Qwen Team. ["Qwen-Image Technical Report"](https://arxiv.org/abs/2508.02324). August 4, 2025.
+
+[^36]: Cai, Huanqia et al. ["Z-Image: An Efficient Image Generation Foundation Model with Single-Stream Diffusion Transformer"](https://arxiv.org/abs/2511.22699). November 27, 2025; Tongyi-MAI. ["Z-Image"](https://github.com/Tongyi-MAI/Z-Image). Alibaba (Tongyi Lab) *open source* project.
