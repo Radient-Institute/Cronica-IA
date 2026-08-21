@@ -11,15 +11,15 @@ image: _din_style/banner_images/07_ed.webp
 
 “The Different One” brought peace of mind to those who believed AI would completely transform software development. The impact of GitHub Copilot was anything but trivial, and the natural next step after ChatGPT’s release was obvious: build an editor with AI baked in—a side chat capable of reading and editing your code, and that, even if all its edits were bad, would at least save you from opening a browser every time you wanted to ask ChatGPT something.
 
-As early as the beginning of 2023, we already had several proposals: Cursor, Codeium, Replit, Continue, and others. All of them were gradually refining their *prompts*, *tools*, and *workflows* to become less useless (no offense—at that time, the results really were bad).
+As early as the beginning of 2023, we already had several proposals: Cursor, Codeium, Replit, Continue, and others.[^1][^2] All of them were gradually refining their *prompts*, *tools*, and *workflows* to become less useless (no offense—at that time, the results really were bad).
 
 The following year, more ambitious players doubled down. They trusted that models would improve so much that their product would become an **autonomous software engineer**—junior-level, yes, but autonomous nonetheless. An *agent* capable of implementing a feature described in natural language, refactoring a file, and running it on its own, gaining more autonomy over time.
 
-The first to truly scare developers appeared in March 2024: **Devin**, from Cognition AI. To showcase its capabilities, they used a then-obscure *benchmark*: **SWE-bench**, which collects real GitHub *issues* (half of them from Django) and evaluates whether a model can solve them. Devin reached 14%, which was honestly a surprising result. In August, **Genie**, from Cosine, pushed the number to 30%.
+The first to truly scare developers appeared in March 2024: **Devin**, from Cognition AI.[^4] To showcase its capabilities, they used a then-obscure *benchmark*: **SWE-bench**, which collects real GitHub *issues* (more than a third of them from Django) and evaluates whether a model can solve them.[^3] Devin reached 14%, which was honestly a surprising result.[^4] In August, **Genie**, from Cosine, pushed the number to 30%.[^5]
 
 ## The Scaffolding Core Arrives
 
-“The Different One” arrived in June 2024. **Sonnet 3.5** appeared like a lone wolf, as Anthropic did not announce the full Claude 3.5 series—only releasing the middle sibling.
+“The Different One” arrived in June 2024. **Sonnet 3.5** appeared like a lone wolf, as Anthropic did not announce the full Claude 3.5 series—only releasing the middle sibling.[^6]
 
 And almost immediately, as if by magic, **all the infrastructure these *startups* had built began to work**. Small but non-trivial features implemented themselves, the code compiled, the generated *frontend* looked acceptable. People tried it, were surprised, and shared it, creating a snowball effect.
 
@@ -27,23 +27,74 @@ Over the following months, the phenomenon grew massive.
 
 ## Vibecoding and Code Agents
 
-In February 2025, *senpai* Karpathy coined a hyper-popular term that the entire tech world ended up hearing: **vibecoding**. It referred to a style of programming where you go with the *vibes*: you ignore the code and just give instructions to the LLM; when errors appear, you simply *copy/paste* them into the chat and let the model fix things. Accept everything—and it works.  
-He described it as something fun for improvised weekend projects.
+In February 2025, *senpai* Karpathy coined a hyper-popular term that the entire tech world ended up hearing: **vibecoding**.[^7] It referred to a style of programming where you go with the *vibes*: you ignore the code and just give instructions to the LLM; when errors appear, you simply *copy/paste* them into the chat and let the model fix things. Accept everything—and it works.\
+He described it as something fun for improvised weekend projects.[^7]
 
 However, the term was overused and distorted by the *mainstream*, leading many to reject it because they understood it differently from its original meaning.
 
-The success of LLMs in code was so significant that it pushed the major labs to create their own **code agents**, initially operating from the command line (CLI):  
-- **claude-code** in February 2025,  
-- **codex-cli** from OpenAI in April,  
-- **gemini-cli** in June.  
+The success of LLMs in code was so significant that it pushed the major labs to create their own **code agents**, initially operating from the command line (CLI):
 
-OpenAI went a step further and launched Codex as a web and *cloud* service in May.
+- **claude-code** in February 2025,[^8]
+- **codex-cli** from OpenAI in April,[^9]
+- **gemini-cli** in June.[^10]
+
+OpenAI went a step further and launched Codex as a web and *cloud* service in May.[^11]
 
 ---
 
 ## After Anthropic’s Success
 
-As for the current state of SWE-bench, OpenAI has claimed that a large portion of the problems in that *benchmark* were poorly specified or lacked sufficient information to be solvable. As a result, it selected a subset of problems it considers “solvable” and rebranded it as **SWE-bench Verified**, sidelining the original version.  
-State-of-the-art models reach around 80% on this new (and much easier) variant as of December 2025.
+As for the current state of SWE-bench, OpenAI has claimed that a large portion of the problems in that *benchmark* were poorly specified or lacked sufficient information to be solvable. As a result, it selected a subset of problems it considers “solvable” and rebranded it as **SWE-bench Verified**, sidelining the original version.[^12]\
+State-of-the-art models reach around 80% on this new (and much easier) variant as of December 2025.[^13]
 
-Anthropic continued to update its models steadily, doubling down on its specialty: code. It updated Sonnet 3.5 in late 2024, released **Sonnet 3.7** (with *CoT*) in February 2025, unveiled the **Claude 4** series in May 2025, and with intermediate updates, by November 2025 we already had **version 4.5**
+Anthropic continued to update its models steadily, doubling down on its specialty: code. It updated Sonnet 3.5 in late 2024,[^14] released **Sonnet 3.7** (with *CoT*) in February 2025,[^8] unveiled the **Claude 4** series in May 2025,[^15] and with intermediate updates, by November 2025 we already had **version 4.5** of Sonnet and Opus.[^16][^17]
+
+Anthropic had one of the most optimistic CEOs about the pace of AI development. He has made statements such as: by the end of 2025, more than 90% of code will be generated by AI,[^18] or that AGI could arrive in 2026 or 2027.[^19] The company, moreover, often used to highlight with each release the supposed ability of its models to “work on a problem for several hours continuously”.[^15]
+
+During these two years of takeoff, they built a solid fan base that defends Anthropic’s models tooth and nail. Despite not being SOTA on every *benchmark*, for code-related tasks people still widely preferred them. They said there was something special about them. Something different.
+
+---
+
+They closed 2025 with a current valuation of **$183 billion**,[^20] and being labeled the strongest competitor to OpenAI apart from the big corporations.
+
+## References
+
+[^1]: Cursor. ["Introducing Cursor 0.2.0!"](https://cursor.com/changelog/0-2-0). April 6, 2023.
+
+[^2]: Replit. ["Announcing Ghostwriter Chat: The first conversational AI programmer"](https://replit.com/blog/gw-chat-launch). February 14, 2023.
+
+[^3]: Jimenez, Carlos E. et al. ["SWE-bench: Can Language Models Resolve Real-World GitHub Issues?"](https://openreview.net/forum?id=VTF8yNQM66). ICLR 2024. The original set contains 2,294 tasks from 12 repositories; 850 come from Django, approximately 37%.
+
+[^4]: Cognition. ["Introducing Devin, the first AI software engineer"](https://cognition.com/blog/introducing-devin). March 12, 2024. Cognition reported 13.86% on SWE-bench.
+
+[^5]: Pullen, Alistair / Cosine. ["Genie"](https://www.linkedin.com/posts/alistair-pullen-616129226_im-excited-to-share-that-weve-built-the-activity-7228747100056924163-w2sR). August 12, 2024. Cosine reported 30.08% on SWE-bench.
+
+[^6]: Anthropic. ["Claude 3.5 Sonnet"](https://www.anthropic.com/news/claude-3-5-sonnet). June 21, 2024. Anthropic presented it as the first release of the future Claude 3.5 family.
+
+[^7]: Karpathy, Andrej. ["There's a new kind of coding I call 'vibe coding'"](https://x.com/karpathy/status/1886192184808149383). February 2, 2025.
+
+[^8]: Anthropic. ["Claude 3.7 Sonnet and Claude Code"](https://www.anthropic.com/news/claude-3-7-sonnet). February 24, 2025.
+
+[^9]: OpenAI. ["This week's launches: o3, o4-mini, GPT-4.1, and Codex CLI"](https://community.openai.com/t/this-weeks-launches-o3-o4-mini-gpt-4-1-and-codex-cli/1230312). April 17, 2025.
+
+[^10]: Google. ["Gemini CLI: your open-source AI agent"](https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-cli-open-source-ai-agent/). June 25, 2025.
+
+[^11]: OpenAI. ["Introducing Codex"](https://openai.com/index/introducing-codex/). May 16, 2025.
+
+[^12]: Chowdhury, Neil et al. ["Introducing SWE-bench Verified"](https://openai.com/index/introducing-swe-bench-verified/). 2024. The subset contains 500 problems reviewed by human developers and considered solvable.
+
+[^13]: SWE-bench. ["Official Leaderboards"](https://www.swebench.com/). December 2025. Claude Opus 4.5 reached 79.2% on SWE-bench Verified on December 5 and 15.
+
+[^14]: Anthropic. ["Introducing computer use, a new Claude 3.5 Sonnet, and Claude 3.5 Haiku"](https://www.anthropic.com/news/3-5-models-and-computer-use). October 22, 2024.
+
+[^15]: Anthropic. ["Introducing Claude 4"](https://www.anthropic.com/news/claude-4). May 22, 2025. Anthropic claimed that Opus 4 could work continuously for several hours and reported a seven-hour test from Rakuten.
+
+[^16]: Anthropic. ["Introducing Claude Sonnet 4.5"](https://www.anthropic.com/news/claude-sonnet-4-5). September 29, 2025.
+
+[^17]: Anthropic. ["Introducing Claude Opus 4.5"](https://www.anthropic.com/news/claude-opus-4-5). November 24, 2025.
+
+[^18]: Council on Foreign Relations / Dario Amodei. Statements from March 10, 2025. Amodei said he expected AI to write 90% of code in three to six months, and essentially all of it within twelve months. See also WIRED, ["How to Become a Vibe Coder"](https://www.wired.com/story/uncanny-valley-podcast-how-to-become-a-vibe-coder/).
+
+[^19]: Fridman, Lex. ["Dario Amodei: Anthropic CEO on Claude, AGI & the Future of AI & Humanity"](https://lexfridman.com/?p=6075). November 2024. Amodei said that extrapolating the pace of progress, we could get there in 2026 or 2027, though he added numerous reservations about that prediction.
+
+[^20]: Reuters. ["Anthropic's valuation more than doubles to $183 billion after $13 billion fundraise"](https://www.reuters.com/business/anthropics-valuation-more-than-doubles-183-billion-after-13-billion-fundraise-2025-09-02/). September 2, 2025.
