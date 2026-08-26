@@ -69,7 +69,7 @@ Los entresijos del nivel de éxito de Sora los meses próximos a su salida, su b
 
 [^3]: Stability AI. ["Introducing Stable Video Diffusion"](https://stability.ai/news/stable-video-diffusion-open-ai-video-model). 21 de noviembre de 2023.
 
-[^4]: OpenAI. ["Video generation models as world simulators"](https://openai.com/index/video-generation-models-as-world-simulators/). 15 de febrero de 2024. Sora generaba vídeos de hasta un minuto y OpenAI presentó el escalado de estos modelos como un camino hacia “simuladores de propósito general del mundo físico”.
+[^4]: OpenAI. ["Video generation models as world simulators"](https://openai.com/index/video-generation-models-as-world-simulators/). 15 de febrero de 2024.
 
 [^5]: Kuaishou. ["Kuaishou Unveils Proprietary Video Generation Model 'Kling;' Testing Now Available"](https://ir.kuaishou.com/news-releases/news-release-details/kuaishou-unveils-proprietary-video-generation-model-kling). 10 de junio de 2024. El acceso inicial comenzó el 6 de junio.
 
@@ -89,17 +89,17 @@ Los entresijos del nivel de éxito de Sora los meses próximos a su salida, su b
 
 [^13]: THUDM. ["CogVideoX"](https://github.com/THUDM/CogVideo). Agosto de 2024. CogVideoX-2B fue abierto el 6 de agosto y CogVideoX-5B el 27 de agosto.
 
-[^14]: OpenAI. ["Sora: Creating video from text"](https://openai.com/index/sora/). Febrero de 2024. OpenAI limitó inicialmente el acceso a *red teamers*, artistas visuales, diseñadores y cineastas, y señaló explícitamente la evaluación de riesgos como motivo para compartir el modelo de forma restringida.
+[^14]: OpenAI. ["Sora: Creating video from text"](https://openai.com/index/sora/). Febrero de 2024.
 
-[^15]: Wiggers, Kyle. ["OpenAI's Sora video generator appears to have leaked"](https://techcrunch.com/2024/11/26/artists-appears-to-have-leaked-access-to-openais-sora/). TechCrunch. 26 de noviembre de 2024. Recoge reporting de *The Information* según el cual el Sora original podía tardar más de diez minutos de procesamiento para generar un clip de un minuto; esto es un indicio de su coste de inferencia, no una medición pública directa del coste por generación.
+[^15]: Wiggers, Kyle. ["OpenAI's Sora video generator appears to have leaked"](https://techcrunch.com/2024/11/26/artists-appears-to-have-leaked-access-to-openais-sora/). TechCrunch. 26 de noviembre de 2024. Recoge reporting de *The Information* según el cual el Sora original podía tardar más de diez minutos de procesamiento para generar un clip de un minuto.
 
-[^16]: OpenAI. ["Sora is here"](https://openai.com/index/sora-is-here/). 9 de diciembre de 2024. Sora Turbo fue descrito como significativamente más rápido que el modelo mostrado en febrero y permitía generar vídeos de hasta 20 segundos, frente al minuto mostrado originalmente.
+[^16]: OpenAI. ["Sora is here"](https://openai.com/index/sora-is-here/). 9 de diciembre de 2024.
 
 [^17]: Google. ["Fuel your creativity with new generative media models and tools"](https://blog.google/innovation-and-ai/products/generative-media-models-io-2025/). 20 de mayo de 2025. Veo 3 incorporó generación nativa de audio y estuvo disponible ese mismo día para suscriptores Ultra en Estados Unidos.
 
 [^18]: MidJourney. ["Introducing Midjourney V1 Video"](https://updates.midjourney.com/introducing-our-v1-video-model/). 18 de junio de 2025.
 
-[^19]: Pofeldt, Elaine. ["The Race To Create A Billion-Dollar, One-Person Business"](https://www.forbes.com/sites/elainepofeldt/2025/11/17/the-race-to-create-a-billion-dollar-one-person-business/). Forbes. 17 de noviembre de 2025. La cifra de 500 millones de dólares corresponde a estimaciones sobre una empresa privada que no publica estados financieros auditados.
+[^19]: Pofeldt, Elaine. ["The Race To Create A Billion-Dollar, One-Person Business"](https://www.forbes.com/sites/elainepofeldt/2025/11/17/the-race-to-create-a-billion-dollar-one-person-business/). Forbes. 17 de noviembre de 2025.
 
 [^20]: Google. ["Introducing Veo 3.1 and advanced capabilities in Flow"](https://blog.google/innovation-and-ai/products/veo-updates-flow/). 15 de octubre de 2025.
 
@@ -107,4 +107,4 @@ Los entresijos del nivel de éxito de Sora los meses próximos a su salida, su b
 
 [^22]: Wang, Alexandr. Declaraciones durante el lanzamiento de Vibes, 25 de septiembre de 2025. ["For this early version, we've partnered with Midjourney and Black Forest Labs while we continue developing our own models behind the scenes."](https://www.techmeme.com/250926/h0135)
 
-[^23]: OpenAI. ["Sora 2 is here"](https://openai.com/index/sora-2/). 30 de septiembre de 2025. OpenAI lanzó Sora 2 como modelo conjunto de vídeo y audio junto con una app social; la función permitía registrar una vez la apariencia y voz del usuario para insertarlo en escenas, y el servicio se ofreció inicialmente gratis con límites generosos.
+[^23]: OpenAI. ["Sora 2 is here"](https://openai.com/index/sora-2/). 30 de septiembre de 2025. OpenAI lanzó Sora 2 como modelo conjunto de vídeo y audio junto con una app social.

@@ -42,11 +42,11 @@ Ese fue el último modelo de la serie O, al menos de cara al usuario, ya que Ope
 
 ## Referencias
 
-[^1]: Reuters. ["OpenAI researchers warned board of AI breakthrough ahead of CEO ouster, sources say"](https://www.reuters.com/technology/openai-researchers-warned-board-ai-breakthrough-ahead-ceo-ouster-sources-2023-11-22/). 22 de noviembre de 2023. Reuters reportó que Q* podía resolver ciertos problemas matemáticos y que algunos investigadores de OpenAI lo consideraban un avance relevante; sus capacidades no fueron verificadas independientemente.
+[^1]: Reuters. ["OpenAI researchers warned board of AI breakthrough ahead of CEO ouster, sources say"](https://www.reuters.com/technology/openai-researchers-warned-board-ai-breakthrough-ahead-ceo-ouster-sources-2023-11-22/). 22 de noviembre de 2023.
 
 [^2]: Reuters. ["OpenAI working on new reasoning technology under code name 'Strawberry'"](https://www.reuters.com/technology/artificial-intelligence/openai-working-new-reasoning-technology-under-code-name-strawberry-2024-07-12/). 12 de julio de 2024.
 
-[^3]: OpenAI. ["Learning to reason with LLMs"](https://openai.com/index/learning-to-reason-with-llms/). 12 de septiembre de 2024. OpenAI presentó o1-preview como un modelo entrenado mediante *large-scale reinforcement learning*, capaz de producir una cadena de razonamiento interna y cuyo rendimiento aumentaba tanto con más RL como con más cómputo en test time.
+[^3]: OpenAI. ["Learning to reason with LLMs"](https://openai.com/index/learning-to-reason-with-llms/). 12 de septiembre de 2024. OpenAI presentó o1-preview.
 
 [^4]: Wei, Jason et al. ["Chain-of-Thought Prompting Elicits Reasoning in Large Language Models"](https://arxiv.org/abs/2201.11903). 28 de enero de 2022.
 
@@ -60,7 +60,7 @@ Ese fue el último modelo de la serie O, al menos de cara al usuario, ya que Ope
 
 [^9]: Rein, David et al. ["GPQA: A Graduate-Level Google-Proof Q&A Benchmark"](https://arxiv.org/abs/2311.12022). 20 de noviembre de 2023.
 
-[^10]: GAIR-NLP. ["O1 Replication Journey"](https://github.com/GAIR-NLP/O1-Journey). Octubre de 2024. El proyecto documentó públicamente intentos de reproducir comportamientos como *trial-and-error*, corrección, *backtracking* y reflexión.
+[^10]: GAIR-NLP. ["O1 Replication Journey"](https://github.com/GAIR-NLP/O1-Journey). Octubre de 2024.
 
 [^11]: Qwen Team. ["QwQ: Reflect Deeply on the Boundaries of the Unknown"](https://qwenlm.github.io/blog/qwq-32b-preview/). 28 de noviembre de 2024. Qwen presentó QwQ-32B-Preview como un modelo experimental de razonamiento.
 
@@ -68,6 +68,6 @@ Ese fue el último modelo de la serie O, al menos de cara al usuario, ya que Ope
 
 [^13]: OpenAI. ["Learning to reason with LLMs"](https://openai.com/index/learning-to-reason-with-llms/). 12 de septiembre de 2024. o1-preview obtuvo un rating de 1258 en Codeforces, aproximadamente el percentil 62.
 
-[^14]: Chollet, François. ["OpenAI o3 Breakthrough High Score on ARC-AGI-Pub"](https://arcprize.org/blog/oai-o3-pub-breakthrough). ARC Prize. 20 de diciembre de 2024. El o3 evaluado había sido entrenado sobre parte del conjunto público de entrenamiento de ARC-AGI-1 y obtuvo 75,7% con menor cómputo y 87,5% usando aproximadamente 172 veces más. ARC Prize confirmó posteriormente que el o3 lanzado en abril no era el mismo modelo evaluado en diciembre.
+[^14]: Chollet, François. ["OpenAI o3 Breakthrough High Score on ARC-AGI-Pub"](https://arcprize.org/blog/oai-o3-pub-breakthrough). ARC Prize. 20 de diciembre de 2024. El o3 evaluado había sido entrenado sobre parte del conjunto público de entrenamiento de ARC-AGI-1 y obtuvo 75,7% con menor cómputo y 87,5% usando aproximadamente 172 veces más.
 
 [^15]: OpenAI. ["Introducing OpenAI o3 and o4-mini"](https://openai.com/index/introducing-o3-and-o4-mini/). 16 de abril de 2025. OpenAI lanzó o3 y o4-mini y declaró que estaba convergiendo las capacidades especializadas de razonamiento de la serie O con las capacidades conversacionales de la serie GPT.

@@ -16,23 +16,23 @@ Tiene universidades potentes, profesionales potentes, suficiente capital y, aunq
 Al igual que todas las empresas estadounidenses (y algunas europeas), los laboratorios chinos también se sumaron a [la captura de GPT-4]({{< relref "02_la_captura_de_gpt_4.md" >}}). Para finales del 2023 ya había dos figuras especialmente relevantes: Qwen y DeepSeek.
 
 {{% details title="Lanzamientos Chinos 2023" open=false %}}
-- **Qwen**, con Tongyi Qianwen, Qwen VL y Qwen 1.5 (agosto, septiembre y diciembre).
+- **Qwen**, con Tongyi Qianwen (abril), Qwen-7B/Qwen-VL (agosto), Qwen-14B (septiembre) y Qwen-72B/Qwen-1.8B (noviembre).
 - **DeepSeek**, con DeepSeek Coder y DeepSeek LLM (noviembre).
 {{% /details %}}
 
 Ambas mostraban un 2024 prometedor. Y efectivamente lo fue.
 
-DeepSeek lanzó en abril **DeepSeek Math**, un modelo excelente en matemáticas cuyo paper introducía una técnica de *policy gradient* que cobraría importancia más adelante: **GRPO**. Para julio sacaron una actualización de su modelo **DeepSeek V2**, que lo posicionó como el mejor modelo OSS del mundo según **LMarena**, un benchmark basado en preferencias humanas que compara respuestas de diferentes modelos lado a lado para armar un ranking de Elo.
+DeepSeek lanzó en febrero **DeepSeek Math**, un modelo excelente en matemáticas cuyo paper introducía una técnica de *policy gradient* que cobraría importancia más adelante: **GRPO**. Para julio sacaron una actualización de su modelo **DeepSeek V2**, que lo posicionó como el mejor modelo OSS del mundo según **LMSYS** (ahora conocido como LMArena), un benchmark basado en preferencias humanas que compara respuestas de diferentes modelos lado a lado para armar un ranking de Elo.
 
 Sí, China ya tenía el mejor modelo open source del planeta a mediados de 2024, medio año antes de que Occidente siquiera procesara la idea de que los laboratorios chinos podían competir al máximo nivel.
 
 Por su parte, Qwen anunció en septiembre su serie **Qwen 2.5**, cuyos resultados en benchmarks tradicionales eran tan altos que muchos laboratorios evitaban incluirlos en sus tablas comparativas para evitar verse inferiores.
 
-Muchos conocieron a DeepSeek recién en diciembre, cuando lanzaron **DeepSeek V3**. La ballena no podía fallar, su iteración anterior había sido el mejor modelo abierto y esta vez no fue diferente. V3 arrasaba con todas las alternativas… aunque a un costo alto: era un **MoE de 675B parámetros** en total, OSS sí, pero sin versiones destiladas más pequeñas. En todo caso, siempre hay formas de probar los modelos gratis, así que no era un gran problema.
+Muchos conocieron a DeepSeek recién en diciembre, cuando lanzaron **DeepSeek V3**. La ballena no podía fallar, su iteración anterior había sido el mejor modelo abierto y esta vez no fue diferente. V3 arrasaba con todas las alternativas… aunque a un costo alto: era un **MoE de 671B parámetros** en total, OSS sí, pero sin versiones destiladas más pequeñas. En todo caso, siempre hay formas de probar los modelos gratis, así que no era un gran problema.
 
 La fiebre por los modelos de razonamiento estaba en auge, pero este lanzamiento quedó relativamente contenido dentro del círculo de obsesos por la IA porque DeepSeek V3 era un modelo instruct, no un modelo orientado al razonamiento.
 
-En su paper incluyeron un dato que sorprendió a la comunidad: el entrenamiento del *checkpoint* requirió 2.82 millones de horas de H800, equivalentes a unos **5 millones de dólares**. Que mencionaran explícitamente esa cifra sería, curiosamente, la chispa del colapso bursátil del mes siguiente.
+En su paper incluyeron un dato que sorprendió a la comunidad: el entrenamiento del *checkpoint* requirió 2.788 millones de horas de H800, equivalentes a unos **5 millones de dólares**. Que mencionaran explícitamente esa cifra sería, curiosamente, la chispa del colapso bursátil del mes siguiente.
 
 ---
 
