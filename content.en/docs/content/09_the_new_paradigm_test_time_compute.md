@@ -42,11 +42,11 @@ That was the last model of the O series—at least from a user-facing perspectiv
 
 ## References
 
-[^1]: Reuters. ["OpenAI researchers warned board of AI breakthrough ahead of CEO ouster, sources say"](https://www.reuters.com/technology/openai-researchers-warned-board-ai-breakthrough-ahead-ceo-ouster-sources-2023-11-22/). November 22, 2023. Reuters reported that Q* could solve certain mathematical problems and that some OpenAI researchers considered it a relevant advance; its capabilities were not independently verified.
+[^1]: Reuters. ["OpenAI researchers warned board of AI breakthrough ahead of CEO ouster, sources say"](https://www.reuters.com/technology/openai-researchers-warned-board-ai-breakthrough-ahead-ceo-ouster-sources-2023-11-22/). November 22, 2023.
 
 [^2]: Reuters. ["OpenAI working on new reasoning technology under code name 'Strawberry'"](https://www.reuters.com/technology/artificial-intelligence/openai-working-new-reasoning-technology-under-code-name-strawberry-2024-07-12/). July 12, 2024.
 
-[^3]: OpenAI. ["Learning to reason with LLMs"](https://openai.com/index/learning-to-reason-with-llms/). September 12, 2024. OpenAI presented o1-preview as a model trained through *large-scale reinforcement learning*, capable of producing an internal chain of reasoning and whose performance increased with both more RL and more test-time compute.
+[^3]: OpenAI. ["Learning to reason with LLMs"](https://openai.com/index/learning-to-reason-with-llms/). September 12, 2024. OpenAI presented o1-preview.
 
 [^4]: Wei, Jason et al. ["Chain-of-Thought Prompting Elicits Reasoning in Large Language Models"](https://arxiv.org/abs/2201.11903). January 28, 2022.
 
@@ -60,14 +60,14 @@ That was the last model of the O series—at least from a user-facing perspectiv
 
 [^9]: Rein, David et al. ["GPQA: A Graduate-Level Google-Proof Q&A Benchmark"](https://arxiv.org/abs/2311.12022). November 20, 2023.
 
-[^10]: GAIR-NLP. ["O1 Replication Journey"](https://github.com/GAIR-NLP/O1-Journey). October 2024. The project publicly documented attempts to reproduce behaviors such as *trial-and-error*, correction, *backtracking*, and reflection.
+[^10]: GAIR-NLP. ["O1 Replication Journey"](https://github.com/GAIR-NLP/O1-Journey). October 2024.
 
-[^11]: Qwen Team. ["QwQ: Reflect Deeply on the Boundaries of the Unknown"](https://qwenlm.github.io/blog/qwq-32b-preview/). November 28, 2024. Qwen presented QwQ-32B-Preview as an experimental reasoning model.
+[^11]: Qwen Team. ["QwQ: Reflect Deeply on the Boundaries of the Unknown"](https://qwenlm.github.io/blog/qwq-32b-preview/). November 28, 2024.
 
 [^12]: OpenAI. ["12 Days of OpenAI — Day 12: o3 preview & call for safety researchers"](https://openai.com/12-days/?day=12). December 20, 2024. OpenAI presented o3 and o3-mini without releasing them to the public.
 
 [^13]: OpenAI. ["Learning to reason with LLMs"](https://openai.com/index/learning-to-reason-with-llms/). September 12, 2024. o1-preview obtained a rating of 1258 on Codeforces, approximately the 62nd percentile.
 
-[^14]: Chollet, François. ["OpenAI o3 Breakthrough High Score on ARC-AGI-Pub"](https://arcprize.org/blog/oai-o3-pub-breakthrough). ARC Prize. December 20, 2024. The o3 evaluated had been trained on part of the public training set of ARC-AGI-1 and obtained 75.7% with lower compute and 87.5% using approximately 172 times more. ARC Prize later confirmed that the o3 released in April was not the same model evaluated in December.
+[^14]: Chollet, François. ["OpenAI o3 Breakthrough High Score on ARC-AGI-Pub"](https://arcprize.org/blog/oai-o3-pub-breakthrough). ARC Prize. December 20, 2024. The o3 evaluated had been trained on part of the public training set of ARC-AGI-1 and obtained 75.7% with lower compute and 87.5% using approximately 172 times more.
 
 [^15]: OpenAI. ["Introducing OpenAI o3 and o4-mini"](https://openai.com/index/introducing-o3-and-o4-mini/). April 16, 2025. OpenAI released o3 and o4-mini and stated it was converging the specialized reasoning capabilities of the O series with the conversational capabilities of the GPT series.
