@@ -13,7 +13,7 @@ El estigma occidental de que China “solo copia” y no es capaz de crear tecno
 
 Tiene universidades potentes, profesionales potentes, suficiente capital y, aunque las restricciones de chips de NVIDIA dificultan (sin llegar a bloquear) el acceso al cómputo, aun así encontraban caminos para avanzar.
 
-Al igual que todas las empresas estadounidenses (y algunas europeas), los laboratorios chinos también se sumaron a [la captura de GPT-4]\({{< relref "02\_la\_captura\_de\_gpt\_4.md" >}}). Para finales del 2023 ya había dos figuras especialmente relevantes: Qwen y DeepSeek.
+Al igual que todas las empresas estadounidenses (y algunas europeas), los laboratorios chinos también se sumaron a [la captura de GPT-4]({{< relref "02_la_captura_de_gpt_4.md" >}}). Para finales del 2023 ya había dos figuras especialmente relevantes: Qwen y DeepSeek.
 
 {{% details title="Lanzamientos Chinos 2023" open=false %}}
 
