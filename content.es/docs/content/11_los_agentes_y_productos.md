@@ -43,7 +43,7 @@ A inicios del 2025, OpenAI lanzó sus propios agentes especializados.
 
 Uno de ellos fue **Deep Research**, una versión de O3 ajustada para crear reportes extensos o encontrar información puntual; podía tardar varias decenas de minutos en completarse y a la gente le encantó. Tanto que todos los laboratorios frontera lo copiaron… excepto Google, que ya tenía un equivalente desde diciembre del 2024, con el mismo nombre, y que paso desapercibido.
 
-El segundo agente fue **Operator**: un nuevo modelo presuntamente basado en GPT-4o capaz de interactuar con una máquina virtual a través de la terminal y con un feedback constante de sus interacciones via interfaz gráfica. A diferencia de Deep Research, Operator requiere entrenamiento real del modelo en interacción con una interfaz, no basta con un simple *prompt*, lo que hizo que otros laboratorios no pudieran copiar sus capacidades tan rápido. Su uso no se masifico y poco a poco fue pasando al olvido.
+El otro agente fue **Operator**: un nuevo modelo presuntamente basado en GPT-4o capaz de interactuar con la interfaz grafica de una máquina virtual. A diferencia de Deep Research, Operator requiere entrenamiento real del modelo en interacción con una interfaz, no basta con un simple *prompt*, lo que hizo que otros laboratorios no pudieran copiar sus capacidades tan rápido. Su uso no se masifico y poco a poco fue pasando al olvido.
 
 ## La interfaz y la madurez
 
